@@ -12,7 +12,7 @@ redirect_from:
 ### Howard Nemerov Scholarship
 *Issued by Washington University in St. Louis · 2023-2027*
 
-4-year scholarship awarded to 10 most outstanding writers from all WashU applicants who submitted a portfolio of creative work
+4-year scholarship awarded to 10 most outstanding writers from all WashU applicants who submitted a portfolio of creative work; I was the only international student receiving this scholarship
 <br/><br/>
 
 ### Safar Shakeyev Certificate for Outstanding Leadership

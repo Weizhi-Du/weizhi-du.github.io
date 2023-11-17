@@ -58,7 +58,7 @@ redirect_from:
 | 	                                                                                                    |                     AP Calculus AB                     | Advanced Placement |                                                               [Math 131](https://acadinfo.wustl.edu/CourseListings/CourseInfo.aspx?sem=FL2023&sch=L&dept=L24&crs=131){:target="_blank"}                                                               |
 
 
-Course Number: <br/>
+Course Numbering: <br/>
 100-299: lower-division courses<br/>
 300-499: upper-division courses<br/>
 500-599: graduate courses<br/>
