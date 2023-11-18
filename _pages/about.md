@@ -48,7 +48,7 @@ Honors & Awards
 * **Global Finalist, 1st Prize in Northern China Region, S.-T. Yau High School Science Awards**, Tsinghua University Yau Mathematical Sciences Center, 2022.
 * **Honorable Mention, Mathematical Contest in Modeling (MCM)**, COMAP, 2021.
 
-For a more detailed list of my honors and awards, please see [Honors & Awards](/honors).
+For a detailed list of my honors and awards, please see [Honors & Awards](/honors).
 
 
 
@@ -74,4 +74,4 @@ Skills
 
 Additional Information
 ======
-Aside of academics, I'm an outdoor enthusiast and participated in two 26-day wilderness experiences in the Death Valley in March 2022 and March 2023. I'm also a creative writer with a focus on identity and non-fiction creations. I work on art projects such as ceramics, paintings, and digital artworks as well. In addition, I co-founded [Milabot Automations](https://milabot.net/){:target="_blank"}, a student startup that provides customized AI ChatBot Automation solutions for middle and small enterprises, and am currently serving as the co-CEO and the CTO.
+Aside of academics, I'm an outdoor enthusiast and participated in two 26-day wilderness experiences in the Death Valley in March 2022 and March 2023. I'm also a creative writer with a focus on identity and non-fiction creations. I work on art projects such as ceramics, paintings, and digital artworks as well. In addition, I co-founded the student startup [Milabot Automations](https://milabot.net/){:target="_blank"} and am in charge of the technology and operation.

@@ -6,6 +6,7 @@ author_profile: true
 redirect_from:
   - /academic
   - /courses
+  - /coursework
 ---
 
 {% include base_path %}
@@ -43,7 +44,7 @@ redirect_from:
 |:---------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------:|:----------------------------:|:-----------:|
 | [GeSt 211](https://acadinfo.wustl.edu/CourseListings/CourseInfo.aspx?sem=FL2023&sch=L&dept=L43&crs=211){:target="_blank"}* |                         		Howard Nemerov Program                         |        David Schuman         |  Fall 2023  |
 | [FYP 175](https://acadinfo.wustl.edu/CourseListings/CourseInfo.aspx?sem=FL2023&sch=L&dept=L61&crs=175){:target="_blank"}*  | 		Beyond Boundaries: Designing Creativity: Innovation Across Disciplines | Bruce Lindsey, Robert Morgan |  Fall 2023  |
-| [CWP 114](https://acadinfo.wustl.edu/CourseListings/CourseInfo.aspx?sem=SP2024&sch=L&dept=L59&crs=114){:target="_blank"}*  |                   			College Writing: Writing Identity                   |        	Tamara Taylor        | Spring 2024 |
+| [CWP 114](https://acadinfo.wustl.edu/CourseListings/CourseInfo.aspx?sem=SP2024&sch=L&dept=L59&crs=114){:target="_blank"}** |                   			College Writing: Writing Identity                   |        	Tamara Taylor        | Spring 2024 |
 
 
 ## Pre-Matriculation Courses
