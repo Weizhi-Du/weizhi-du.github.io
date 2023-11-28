@@ -16,12 +16,12 @@ redirect_from:
 ## CSE Courses
 
 
-| Course #                                                                                                                    |             Course Title             |       Instructor(s)        |  Semester   |
-|:----------------------------------------------------------------------------------------------------------------------------|:------------------------------------:|:--------------------------:|:-----------:|
-| [Math 310](https://acadinfo.wustl.edu/CourseListings/CourseInfo.aspx?sem=SP2024&sch=L&dept=L24&crs=310){:target="_blank"}** |  Foundations for Higher Mathematics  |       Gregory Knese        | Spring 2024 |
-| [CSE 247](https://acadinfo.wustl.edu/CourseListings/CourseInfo.aspx?sem=FL2023&sch=E&dept=E81&crs=247){:target="_blank"}*   |    Data Structures and Algorithms    | Steve Cole, Athena Tabakhi |  Fall 2023  |
-| [Math 233](https://acadinfo.wustl.edu/CourseListings/CourseInfo.aspx?sem=FL2023&sch=L&dept=L24&crs=233){:target="_blank"}*  |             Calculus III             |       Blake Thornton       |  Fall 2023  |
-| [CSE 132](https://acadinfo.wustl.edu/CourseListings/CourseInfo.aspx?sem=SP2024&sch=E&dept=E81&crs=132){:target="_blank"}**  | Introduction to Computer Engineering |         James Orr          | Spring 2024 |
+| Course #                                                                                                                    |             Course Title             |        Instructor(s)         |  Semester   |
+|:----------------------------------------------------------------------------------------------------------------------------|:------------------------------------:|:----------------------------:|:-----------:|
+| [Math 310](https://acadinfo.wustl.edu/CourseListings/CourseInfo.aspx?sem=SP2024&sch=L&dept=L24&crs=310){:target="_blank"}** |  Foundations for Higher Mathematics  |        Gregory Knese         | Spring 2024 |
+| [CSE 247](https://acadinfo.wustl.edu/CourseListings/CourseInfo.aspx?sem=FL2023&sch=E&dept=E81&crs=247){:target="_blank"}*   |    Data Structures and Algorithms    | Stephen Cole, Athena Tabakhi |  Fall 2023  |
+| [Math 233](https://acadinfo.wustl.edu/CourseListings/CourseInfo.aspx?sem=FL2023&sch=L&dept=L24&crs=233){:target="_blank"}*  |             Calculus III             |        Blake Thornton        |  Fall 2023  |
+| [CSE 132](https://acadinfo.wustl.edu/CourseListings/CourseInfo.aspx?sem=SP2024&sch=E&dept=E81&crs=132){:target="_blank"}**  | Introduction to Computer Engineering |          James Orr           | Spring 2024 |
 
 ## Non-CSE Courses
 
