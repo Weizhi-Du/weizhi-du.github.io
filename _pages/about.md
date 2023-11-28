@@ -11,7 +11,7 @@ redirect_from:
 
 
 
-I'm a first-year student at Washington University in St. Louis double majoring in Computer Science and Finance. I have a devoted interest in software engineering, data science, machine learning, and promoting the benefits and joy of programming.
+I'm a first-year student at Washington University in St. Louis double majoring in Computer Science and Finance. I have a devoted interest in software engineering, data science, machine learning, and promoting the joy of programming and its underlying science.
 
 Education
 ======
@@ -74,4 +74,4 @@ Skills
 
 Additional Information
 ======
-Aside of academics, I'm an outdoor enthusiast and participated in two 26-day wilderness experiences in the Death Valley in March 2022 and March 2023. I'm also a creative writer with a focus on identity and non-fiction creations. I work on art projects such as ceramics, paintings, and digital artworks as well. In addition, I co-founded the student startup [Milabot Automations](https://milabot.net/){:target="_blank"} and am in charge of the technology and operation.
+Aside of academics, I'm an outdoor enthusiast and participated in two 26-day wilderness experiences in the Death Valley in March 2022 and March 2023. I'm also a creative writer with a focus on identity and non-fiction creations. I work on art projects such as ceramics, paintings, and digital artworks as well. In addition, I co-founded the student-run technology startup [Milabot Automations](https://milabot.net/){:target="_blank"}.
