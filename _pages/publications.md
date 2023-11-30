@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 {% if author.googlescholar %}
-  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
+  <u><a href="{{author.googlescholar}}">Google Scholar Profile</a>.</u>
 {% endif %}
 
 {% include base_path %}
