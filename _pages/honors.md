@@ -18,7 +18,7 @@ redirect_from:
 ### Safar Shakeyev Certificate for Outstanding Leadership
 *Issued by The Athenian School · 2023*
 
-Awarded to the most outstanding student leader in the residential life program
+Awarded to the most outstanding student leaders in the residential life program
 <br/><br/>
 
 ### 11th Place in North America, Honorable Mention, Physics Unlimited Premier Competition (PUPC)
@@ -33,25 +33,25 @@ International physics competition for high school students
 Selected by the faculty to speak at the 2022-2023 Convocation
 <br/><br/>
 
-### Issued by Global Finalist, 1st Prize in Northern China Region, S.-T. Yau High School Science Awards
+### Global Finalist, Regional 1st Prize, S.-T. Yau High School Science Awards
 *Issued by Tsinghua University Yau Mathematical Sciences Center · 2022*
 
 International research-based computer science competition with a selection rate of 1%
 <br/><br/>
 
-### Issued by Honorable Mention, Mathematical Contest in Modeling (MCM)
+### Honorable Mention, Mathematical Contest in Modeling (MCM)
 *Issued by COMAP · 2021*
 
 International research-based mathematical modeling competition for college students
 <br/><br/>
 
-### Issued by AMC Honor Roll, AIME qualified
+### AMC Honor Roll, AIME qualified
 *Issued by Mathematical Association of America · 2021*
 
 American mathematics competition for high school students
 <br/><br/>
 
-### Issued by National Second-Level Athlete
+### National Second-Level Athlete
 *Issued by General Administration of Sport of China · 2021*
 
 Swimming Division

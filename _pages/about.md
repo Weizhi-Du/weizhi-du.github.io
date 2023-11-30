@@ -45,7 +45,7 @@ Honors & Awards
 * **Howard Nemerov Scholarship**, Washington University in St. Louis, 2023-2027.
 * **11th Place in North America, Honorable Mention, Physics Unlimited Premier Competition (PUPC)**, Princeton Society of Physics Students, 2023.
 * **Speaker of the Convocation**, The Athenian School, 2022.
-* **Global Finalist, 1st Prize in Northern China Region, S.-T. Yau High School Science Awards**, Tsinghua University Yau Mathematical Sciences Center, 2022.
+* **Global Finalist, Regional 1st Prize, S.-T. Yau High School Science Awards**, Tsinghua University Yau Mathematical Sciences Center, 2022.
 * **Honorable Mention, Mathematical Contest in Modeling (MCM)**, COMAP, 2021.
 
 For a detailed list of my honors and awards, please see [Honors & Awards](/honors).
