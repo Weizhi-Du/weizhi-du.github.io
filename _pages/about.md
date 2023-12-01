@@ -11,19 +11,19 @@ redirect_from:
 
 
 
-I'm a first-year student at Washington University in St. Louis double majoring in Computer Science and Finance. I have a devoted interest in software engineering, data science, machine learning, and promoting the joy of programming and its underlying science.
+I'm an undergraduate student at Washington University in St. Louis double majoring in Computer Science and Finance. I have a devoted interest in machine learning, data science, software engineering, and promoting the joy of programming and its underlying science.
 
 Education
 ======
-* B.S. in Computer Science, Washington University in St. Louis, 2027 (expected)
-  * Second Major in Finance, Minor in Writing
-  * GPA: NA/4.00
+* B.S. in Computer Science (pending), Washington University in St. Louis, 2027 (expected)
+  * Second Major in Finance (pending), Minor in Statistics
+  * GPA: NA/4.00 (Will be available after the first semester)
 * High School Diploma, The Athenian School, 2023
   * GPA: 4.50/4.00
 
 For a complete list of my undergraduate curriculum and more information on courses, please see [Curriculum](/curriculum).
 
-Research
+Publications
 ======
 * **W. Du** and H. Tian, “Transformer and GAN-Based Super-Resolution Reconstruction Network for Medical Images,” *Tsinghua Science and Technology*, vol. 29, no. 1, pp. 197-206, Aug. 2023.
   **[Abstract](/publications/paper-2-isr)** **[Paper](https://doi.org/10.26599/TST.2022.9010071){:target="_blank"}**
@@ -42,11 +42,14 @@ Teaching
 
 Honors & Awards
 ======
+* **Global Finalist, Regional First Prize, S.-T. Yau High School Science Awards**, Tsinghua University Yau Mathematical Sciences Center, 2022.
+* **Honorable Mention, Mathematical Contest in Modeling (MCM)**, COMAP, 2021.
+
+
 * **Howard Nemerov Scholarship**, Washington University in St. Louis, 2023-2027.
 * **11th Place in North America, Honorable Mention, Physics Unlimited Premier Competition (PUPC)**, Princeton Society of Physics Students, 2023.
 * **Speaker of the Convocation**, The Athenian School, 2022.
-* **Global Finalist, Regional 1st Prize, S.-T. Yau High School Science Awards**, Tsinghua University Yau Mathematical Sciences Center, 2022.
-* **Honorable Mention, Mathematical Contest in Modeling (MCM)**, COMAP, 2021.
+
 
 For a detailed list of my honors and awards, please see [Honors & Awards](/honors).
 
@@ -68,10 +71,10 @@ Service and Leadership
 Skills
 ======
 * Technical Skills: Python, Java, MATLAB, R, LaTeX
-* Spoken Languages: English (fluent), Chinese (fluent), Japanese (elementary)
+* Spoken Languages: English (fluent), Chinese (fluent), Japanese (limited)
 
 
 
 Additional Information
 ======
-Aside of academics, I'm an outdoor enthusiast and participated in two 26-day wilderness experiences in the Death Valley in March 2022 and March 2023. I'm also a creative writer with a focus on identity and non-fiction creations. I work on art projects such as ceramics, paintings, and digital artworks as well. In addition, I co-founded the student-run technology startup [Milabot Automations](https://milabot.net/){:target="_blank"}.
+Aside of academics, I'm an outdoor enthusiast and participated in two 26-day professional wilderness experiences in the Death Valley in March 2022 and March 2023. I'm also a creative writer with a focus on identity and non-fiction creations. I work on art projects such as ceramics, paintings, and digital artworks as well. In addition, I co-founded the student-run technology startup [Milabot Automations](https://milabot.net/){:target="_blank"}.
