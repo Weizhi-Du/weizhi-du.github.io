@@ -15,8 +15,8 @@ I'm an undergraduate student at Washington University in St. Louis double majori
 
 Education
 ======
-* B.S. in Computer Science, Washington University in St. Louis, 2027 (expected)
-  * Second Major in Finance (intending), Minor in Statistics
+* B.S. in Computer Science (pending), Washington University in St. Louis, 2027 (expected)
+  * Second Major in Finance (pending), Minor in Statistics
   * GPA: NA/4.00 (Will be available after the first semester)
 * High School Diploma, The Athenian School, 2023
   * GPA: 4.50/4.00
