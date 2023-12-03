@@ -15,8 +15,8 @@ I'm an undergraduate student at Washington University in St. Louis double majori
 
 Education
 ======
-* B.S. in Computer Science (pending), Washington University in St. Louis, 2027 (expected)
-  * Second Major in Finance (pending), Minor in Statistics
+* B.S. in Computer Science (expected enrollment in Aug 2024), Washington University in St. Louis, 2027
+  * Second Major in Finance (expected enrollment in Aug 2024), Minor in Statistics
   * GPA: NA/4.00 (Will be available after the first semester)
 * High School Diploma, The Athenian School, 2023
   * GPA: 4.50/4.00
@@ -42,16 +42,15 @@ Teaching
 
 Honors & Awards
 ======
-* **Global Finalist, Regional First Prize, S.-T. Yau High School Science Awards**, Tsinghua University Yau Mathematical Sciences Center, 2022.
-* **Honorable Mention, Mathematical Contest in Modeling (MCM)**, COMAP, 2021.
+* **[S.-T. Yau High School Science Awards](https://www.yau-science-awards.org/){:target="_blank"}, Global Finalist, Regional First Prize**, Tsinghua University Yau Mathematical Sciences Center, 2022.
+* **[Mathematical Contest in Modeling (MCM)](https://www.comap.com/contests/mcm-icm){:target="_blank"}, Honorable Mention**, COMAP, 2021.
+
+* **[Howard Nemerov Scholarship](https://admissions.wustl.edu/cost-aid/scholarships/academic-scholarships/nemerov-writing-scholars-program/){:target="_blank"}**, Washington University in St. Louis, 2023-2027.
+* **[Physics Unlimited Premier Competition (PUPC)](http://physicsu.org/premier){:target="_blank"}, 11th Place in North America, Honorable Mention**, Princeton Society of Physics Students, 2023.
+* **[Speaker of the Convocation](https://50th.athenian.org/event-detail?pk=19636795){:target="_blank"}**, The Athenian School, 2022.
 
 
-* **Howard Nemerov Scholarship**, Washington University in St. Louis, 2023-2027.
-* **11th Place in North America, Honorable Mention, Physics Unlimited Premier Competition (PUPC)**, Princeton Society of Physics Students, 2023.
-* **Speaker of the Convocation**, The Athenian School, 2022.
-
-
-For a detailed list of my honors and awards, please see [Honors & Awards](/honors).
+For a complete list of my honors and awards, please see [Honors & Awards](/honors).
 
 
 
