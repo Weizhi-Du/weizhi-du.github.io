@@ -8,6 +8,8 @@ redirect_from:
   - /paper
   - /papers
   - /research
+  - /pub
+  - /pubs
 ---
 
 {% if author.googlescholar %}

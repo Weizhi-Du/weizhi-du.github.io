@@ -30,7 +30,7 @@ Selected by the faculty to speak at the 2022-2023 Convocation
 <br/><br/>
 
 
-### [S.-T. Yau High School Science Awards](https://www.yau-science-awards.org/){:target="_blank"}, Global Finalist, Regional First Prize
+### [S.-T. Yau High School Science Awards](https://www.yau-science-awards.org/){:target="_blank"}, Global Finalist, Regional First Prize, Computer Award
 *Issued by Tsinghua University Yau Mathematical Sciences Center · 2022*
 
 International research-based computer science competition with a selection rate of 1%

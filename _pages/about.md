@@ -15,9 +15,9 @@ I'm an undergraduate student at Washington University in St. Louis double majori
 
 Education
 ======
-* B.S. in Computer Science (expected enrollment in Aug 2024), Washington University in St. Louis, 2027
-  * Second Major in Finance (expected enrollment in Aug 2024), Minor in Statistics
-  * GPA: NA/4.00 (Will be available after the first semester)
+* B.S. in Computer Science (expected major enrollment in Aug 2024), Washington University in St. Louis, 2027
+  * Minor in Statistics
+  * GPA: NA/4.00 (Will be available by Dec 2023)
 * High School Diploma, The Athenian School, 2023
   * GPA: 4.50/4.00
 
@@ -42,7 +42,7 @@ Teaching
 
 Honors & Awards
 ======
-* **[S.-T. Yau High School Science Awards](https://www.yau-science-awards.org/){:target="_blank"}, Global Finalist, Regional First Prize**, Tsinghua University Yau Mathematical Sciences Center, 2022.
+* **[S.-T. Yau High School Science Awards](https://www.yau-science-awards.org/){:target="_blank"}, Global Finalist, Regional First Prize, Computer Award**, Tsinghua University Yau Mathematical Sciences Center, 2022.
 * **[Mathematical Contest in Modeling (MCM)](https://www.comap.com/contests/mcm-icm){:target="_blank"}, Honorable Mention**, COMAP, 2021.
 
 * **[Howard Nemerov Scholarship](https://admissions.wustl.edu/cost-aid/scholarships/academic-scholarships/nemerov-writing-scholars-program/){:target="_blank"}**, Washington University in St. Louis, 2023-2027.
@@ -76,4 +76,4 @@ Skills
 
 Additional Information
 ======
-Aside of academics, I'm an outdoor enthusiast and participated in two 26-day professional wilderness experiences in the Death Valley in March 2022 and March 2023. I'm also a creative writer with a focus on identity and non-fiction creations. I work on art projects such as ceramics, paintings, and digital artworks as well. In addition, I co-founded the student-run technology startup [Milabot Automations](https://milabot.net/){:target="_blank"}.
+Aside of academics, I'm an outdoor enthusiast and participated in two 26-day professional wilderness experiences in the Death Valley in March 2022 and March 2023. I'm also a creative writer with a focus on identity and non-fiction creations. I work on art projects such as ceramics, paintings, and digital artworks as well. In addition, I co-founded the student-run technology startup Milabot Automations.
