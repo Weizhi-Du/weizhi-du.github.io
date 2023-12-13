@@ -13,6 +13,8 @@ redirect_from:
 
 I'm an undergraduate student at Washington University in St. Louis double majoring in Computer Science and Finance. I have a devoted interest in machine learning, data science, software engineering, and promoting the joy of programming and its underlying science.
 
+[My resume](/files/old-resume.pdf) is updated as of December 12, 2023.
+
 Education
 ======
 * B.S. in Computer Science (expected major enrollment in Aug 2024), Washington University in St. Louis, 2027
