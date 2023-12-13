@@ -10,7 +10,7 @@ main:
     url: /honors/
 
   - title: "Resume"
-    url: /files/old-resume.pdf
+    url: /files/resume.pdf
     target: _blank
 
 #  - title: "Talks"
