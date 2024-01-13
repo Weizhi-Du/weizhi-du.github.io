@@ -11,17 +11,18 @@ redirect_from:
 
 
 
-I'm an undergraduate student at Washington University in St. Louis double majoring in Computer Science and Finance. I have a devoted interest in machine learning, data science, software engineering, and promoting the joy of programming and its underlying science.
+I'm an undergraduate student at Washington University in St. Louis double majoring in Computer Science and Economics. I'm now serving as an Undergraduate TA for CSE 247: Data Structures and Algorithms. I have a devoted interest in machine learning, data science, software engineering, and promoting the joy of programming and its underlying science.
 
 [My resume](/files/resume.pdf) is updated as of December 12, 2023.
 
 Education
 ======
-* B.S. in Computer Science (expected major enrollment in Aug 2024), Washington University in St. Louis, 2027
-  * Minor in Statistics
-  * GPA: NA/4.00 (Will be available by Dec 2023)
+* B.S. in Computer Science, Washington University in St. Louis, 2027
+    * Second major in Economics
+    * Minor in Statistics
+
 * High School Diploma, The Athenian School, 2023
-  * GPA: 4.50/4.00
+
 
 For a complete list of my undergraduate curriculum and more information on courses, please see [Curriculum](/curriculum).
 
@@ -38,7 +39,7 @@ For a comprehensive description of publications, please see [Publications](/publ
 
 Teaching
 ======
-* Teaching Assistant, Applied Calculus, Calculus AB (AP), Calculus BC (AP), The Athenian School, 2021-2023.
+* Undergraduate Teaching Assistant, **CSE 247: Data Structures and Algorithms**, Washington University in St. Louis, Spring 2024.
 
 
 
@@ -59,7 +60,7 @@ For a complete list of my honors and awards, please see [Honors & Awards](/honor
 Service and Leadership
 ======
 * **Founder & Programming Teacher**, Dino Coding Group, 2019-2023.
-* **Financial Operator**, Washington University China Business Association, 2023.
+* **Financial Operation Officer**, Washington University China Business Association, 2023.
 * **Council Representative**, Washington University LeeBeau Residential College, 2023.
 * **Interpreter & Social Platform Operator**, Shanxi Museum, 2020-2023.
 * **Mentor for International Students**, The Athenian School, 2023.
