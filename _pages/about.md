@@ -60,7 +60,7 @@ For a complete list of my honors and awards, please see [Honors & Awards](/honor
 Service and Leadership
 ======
 * **Founder & Programming Teacher**, Dino Coding Group, 2019-2023.
-* **Financial Operator**, Washington University China Business Association, 2023.
+* **Financial Operation Officer**, Washington University China Business Association, 2023.
 * **Council Representative**, Washington University LeeBeau Residential College, 2023.
 * **Interpreter & Social Platform Operator**, Shanxi Museum, 2020-2023.
 * **Mentor for International Students**, The Athenian School, 2023.
