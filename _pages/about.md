@@ -11,9 +11,9 @@ redirect_from:
 
 
 
-I'm an undergraduate student at Washington University in St. Louis double majoring in Computer Science and Economics. I'm now serving as an Undergraduate TA for CSE 247: Data Structures and Algorithms. I have a devoted interest in machine learning, data science, software engineering, and promoting the joy of programming and its underlying science.
+I'm an undergraduate student at Washington University in St. Louis, intending to double major in Computer Science and Financial Engineering. I'm now serving as an Undergraduate TA for CSE 247: Data Structures and Algorithms. I have a devoted interest in machine learning, data science, software engineering, and promoting the joy of programming and its underlying science.
 
-[My resume](/files/resume.pdf) is updated as of December 12, 2023.
+[My resume](/files/resume.pdf) is updated as of January 27, 2024.
 
 Education
 ======
@@ -39,7 +39,7 @@ For a comprehensive description of publications, please see [Publications](/publ
 
 Teaching
 ======
-* Undergraduate Teaching Assistant, **CSE 247: Data Structures and Algorithms**, Washington University in St. Louis, Spring 2024.
+* Undergraduate Teaching Assistant, **CSE 247: Data Structures and Algorithms**, Studio TA + Grader TA + Office Hours TA, Washington University in St. Louis, Spring 2024.
 
 
 
@@ -79,4 +79,4 @@ Skills
 
 Additional Information
 ======
-Aside of academics, I'm an outdoor enthusiast and participated in two 26-day professional wilderness experiences in the Death Valley in March 2022 and March 2023. I'm also a creative writer with a focus on identity and non-fiction creations. I work on art projects such as ceramics, paintings, and digital artworks as well. In addition, I co-founded the student-run technology startup Milabot Automations.
+Aside of academics, I'm an outdoor enthusiast and participated in two 26-day professional wilderness experiences in the Death Valley in March 2022 and March 2023. I'm also a creative writer with a focus on non-fiction creations. I work on art projects such as ceramics, paintings, and digital artworks as well. In addition, I co-founded the student-run technology startup Milabot Automations in September 2023.
