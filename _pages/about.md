@@ -13,12 +13,12 @@ redirect_from:
 
 I'm an undergraduate student at Washington University in St. Louis, intending to double major in Computer Science and Financial Engineering. I'm now serving as an Undergraduate TA for CSE 247: Data Structures and Algorithms. I have a devoted interest in machine learning, data science, software engineering, and promoting the joy of programming and its underlying science.
 
-[My resume](/files/resume.pdf) is updated as of January 27, 2024.
+[My resume](/files/resume.pdf) is updated as of February 3, 2024.
 
 Education
 ======
 * B.S. in Computer Science, Washington University in St. Louis, 2027
-    * Second major in Economics
+    * Second major in Financial Engineering (pending)
     * Minor in Statistics
 
 * High School Diploma, The Athenian School, 2023
