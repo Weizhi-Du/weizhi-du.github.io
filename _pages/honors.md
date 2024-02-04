@@ -15,6 +15,11 @@ redirect_from:
 4-year scholarship awarded to 10 most outstanding writers from all WashU applicants who submitted a portfolio of creative work; I was the only international student recipient in the program's recent history.
 <br/><br/>
 
+### Dean's List
+*Issued by Washington University in St. Louis · Fall 2023*
+
+Awarded to students who have completed at least 14 graded units and have a semester GPA of 3.6 or higher
+<br/><br/>
 
 ### [Physics Unlimited Premier Competition (PUPC)](http://physicsu.org/premier){:target="_blank"}, 11th Place in North America, Honorable Mention
 *Issued by Princeton Society of Physics Students · 2023*
