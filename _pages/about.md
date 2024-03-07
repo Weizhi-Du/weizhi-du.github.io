@@ -13,7 +13,7 @@ redirect_from:
 
 I'm an undergraduate student at Washington University in St. Louis, intending to double major in Computer Science and Financial Engineering. I'm now serving as an Undergraduate TA for CSE 247: Data Structures and Algorithms. I have a devoted interest in machine learning, data science, software engineering, and promoting the joy of programming and its underlying science.
 
-[My resume](/files/resume.pdf) is updated as of February 3, 2024.
+[My resume](/files/CV_Weizhi_Du.pdf) is updated as of March 6, 2024.
 
 Education
 ======
@@ -37,9 +37,11 @@ For a comprehensive description of publications, please see [Publications](/publ
 
 
 
-Teaching
+Teaching Assistantship
 ======
-* Undergraduate Teaching Assistant, **CSE 247: Data Structures and Algorithms**, Studio TA + Grader TA + Office Hours TA, Washington University in St. Louis, Spring 2024.
+* **CSE 247/502N: Data Structures and Algorithms**, Washington University in St. Louis, Spring 2024.
+  * **Office Hours**: Thursday 4 pm - 6 pm @ Hillman 70; Friday 2 pm - 4 pm @ McDonnel 361.
+  * **Studio Session D**: Thursday 2:30 pm - 3:50 pm @ Eads 016.
 
 
 
@@ -53,20 +55,20 @@ Honors & Awards
 * **[Speaker of the Convocation](https://50th.athenian.org/event-detail?pk=19636795){:target="_blank"}**, The Athenian School, 2022.
 
 
-For a complete list of my honors and awards, please see [Honors & Awards](/honors).
+For a complete list of my honors and awards with descriptions, please see [Honors & Awards](/honors).
 
 
 
 Service and Leadership
 ======
 * **Founder & Programming Teacher**, Dino Coding Group, 2019-2023.
-* **Financial Operation Officer**, Washington University China Business Association, 2023.
+* **Financial Operation Officer**, Washington University China Business Association (HOX), 2023.
 * **Council Representative**, Washington University LeeBeau Residential College, 2023.
 * **Interpreter & Social Platform Operator**, Shanxi Museum, 2020-2023.
 * **Mentor for International Students**, The Athenian School, 2023.
 * **Prefect**, The Athenian School Residential Life Program, 2022-2023.
-* **Logistics Assistant**, Athenian Wilderness Experience (AWE), 2022-2023.
-* **Volunteer Tutor**, Taiyuan Welfare Center for Orphans, 2019-2021.
+* **Logistics Assistant**, Athenian Wilderness Experience in The Athenian School, 2022-2023.
+* **Volunteer Tutor (Math and English)**, Taiyuan Welfare Center for Orphans, 2019-2021.
 
 
 
