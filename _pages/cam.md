@@ -1,5 +1,5 @@
 ---
-permalink: /
+permalink: /cam/
 title: "Campass"
 excerpt: "Campass"
 author_profile: true
