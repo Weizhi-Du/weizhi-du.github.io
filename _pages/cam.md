@@ -3,6 +3,11 @@ permalink: /cam/
 title: "Campass"
 excerpt: "Campass"
 author_profile: true
+redirect_from: 
+  - /cam/
+  - /campass/
+  - /compass/
+  - /cam.html
 ---
 
 
