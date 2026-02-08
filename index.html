@@ -7,9 +7,12 @@
   <meta name="description" content="Weizhi Du — Portfolio Lobby 3.2">
   <link rel="icon" href="assets/images/dalle-2024-08-27-17.59.37-a-simple-colored-line-drawing-of-a-coffee-cup.-the-cup-is-more-defined-with-smooth-curves-a-visible-handle-and-a-small-amount-of-steam-rising-from-.jpg" />
   <title>Weizhi Du</title>
+
   <link rel="stylesheet" href="assets/css/main.css" />
 </head>
+
 <body>
+  <div id="top"></div>
   <canvas id="stars"></canvas>
   <div id="scrollbar"></div>
 
@@ -19,7 +22,6 @@
       <div class="brand">
         <img src="assets/images/pfp_orange.webp" alt="Weizhi avatar">
         <div class="title">Weizhi Du</div>
-        <!-- (No Cmd/Ctrl+K hint in nav per request) -->
       </div>
 
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
@@ -27,14 +29,15 @@
       </button>
 
       <div class="nav-links" id="navLinks">
+        <span class="active-pill" id="activePill" aria-hidden="true"></span>
         <a href="#about">About</a>
         <a href="#skills" data-scroll>Skills</a>
         <a href="#timeline" data-scroll>Timeline</a>
         <a href="#teaching">Teaching</a>
         <a href="#awards">Awards</a>
         <a href="#contact">Contact</a>
-        <a href="#vibes">Vibes</a>
       </div>
+
       <a class="cta magnet" href="#" id="resumeBtn">Resume</a>
     </div>
   </nav>
@@ -47,38 +50,40 @@
     <a href="#teaching" data-tip="Teaching"></a>
     <a href="#awards" data-tip="Awards"></a>
     <a href="#contact" data-tip="Contact"></a>
-    <a href="#vibes" data-tip="Vibes"></a>
   </aside>
 
   <!-- HERO -->
   <header class="hero" role="banner">
-    <!-- background layers for slideshow -->
     <div class="hero-bg" id="heroA" aria-hidden="true"></div>
     <div class="hero-bg" id="heroB" aria-hidden="true"></div>
 
     <div class="cmdk-banner">Press <strong>⌘</strong>/<strong>Ctrl</strong> + <strong>K</strong> to jump anywhere</div>
-    <div class="domain-pill tag">Software • AI/ML • Quant</div>
+    <!-- <div class="domain-pill tag">Software • AI/ML • Quant</div> -->
 
     <div class="h-wrap container" data-reveal>
-      <h1 class="neon">Hey, I'm Weizhi — building at the edge of <em>Software</em> and <em>AI</em>.</h1>
+      <h1 class="neon">Hey, I'm Weizhi — building at the edge of Software and AI.</h1>
+
       <p class="subtitle">
         Undergrad @ <b>Washington University in St. Louis</b> (CS + Financial Engineering).
+        Incoming Machine Learning Engineer Intern @ <b>TikTok</b>.
         Prev Machine Learning Engineer Intern @ <b>Meituan</b>.
         I ship full-stack systems, ML models, and quantitative tools.
-        Amateur songwriter, creative writer, backpacker.
       </p>
+
       <div class="chips">
         <span class="tag">SWE</span>
         <span class="tag">MLE</span>
         <span class="tag">Head TA</span>
-        <span class="tag">LLMs & Diffusion</span>
+        <span class="tag">LLMs</span>
         <span class="tag">RAG • vLLM • LoRA</span>
       </div>
+
       <div class="actions">
         <a class="cta magnet" href="#skills" data-scroll>Tech Stack ⚙️</a>
         <a class="cta magnet" href="#timeline" data-scroll>Journey ⏳</a>
         <a class="cta magnet" href="#contact" data-scroll>Get in touch ✉️</a>
       </div>
+
       <div class="scroll-hint">
         <div>Scroll</div>
         <div class="chev"></div>
@@ -91,24 +96,38 @@
     <div class="container" data-reveal>
       <div class="head">
         <h2 class="neon">A bit about me</h2>
-        <p class="lead">I love turning ideas into delightful systems, especially something through data, algorithms, and models.</p>
+        <p class="lead">I love turning ideas into delightful systems, especially through data, algorithms, and models.</p>
       </div>
 
       <div class="about-grid">
         <article class="about-card glass">
           <h3 style="margin-top:0">Snapshot</h3>
-          <ul style="line-height:1.9">
-            <li><strong>Majors:</strong> Computer Science & Financial Engineering @ WashU</li>
-            <li><strong>Recent:</strong> Machine Learning Engineer Intern @ Meituan</li>
-            <li><strong>Research:</strong> Computational Imaging Group + WashU Medicine Radiation Oncology</li>
-            <li><strong>Interests:</strong> LLM orchestration, RAG, Agentic Systems</li>
-            <li><strong>Fun:</strong> Songwriting • backpacking • creative writing ☕</li>
-          </ul>
 
-          <div class="stats">
-            <div class="stat"><div class="num" data-count="52">0</div><div class="lbl">Days Spent in Death Valley</div></div>
-            <div class="stat"><div class="num" data-count="9">0</div><div class="lbl">Total Course Offerings Taught</div></div>
-            <div class="stat"><div class="num" data-count="398">0</div><div class="lbl">Duolingo Strike</div></div>
+          <div class="about-badges" aria-label="Highlights">
+            <span class="tag">CS + Financial Engineering @ WashU</span>
+            <span class="tag">RA @ WashU Medicine</span>
+            <span class="tag">Head TA @ WashU</span>
+            <span class="tag">Incoming MLE Intern @ TikTok</span>
+            <span class="tag">Prev MLE Intern @ Meituan</span>
+            <span class="tag">Research • LLMs </span>
+          </div>
+
+          <div class="about-two">
+            <div class="mini">
+              <h4>Now</h4>
+              <ul>
+                <li>Building production-ish ML + systems with a bias for speed & clarity.</li>
+                <li>Interests: LLM orchestration, RAG, agentic systems.</li>
+              </ul>
+            </div>
+            <div class="mini">
+              <h4>Outside work</h4>
+              <ul>
+                <li>Songwriting • creative writing</li>
+                <li>Backpacking (Death Valley is a favorite)</li>
+                <li>Always learning, always shipping</li>
+              </ul>
+            </div>
           </div>
         </article>
 
@@ -117,7 +136,7 @@
           <div style="display:grid;gap:10px">
             <a class="cta magnet" href="https://www.linkedin.com/in/duw" target="_blank" rel="noreferrer">LinkedIn</a>
             <a class="cta magnet" href="https://github.com/Weizhi-Du" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="cta magnet" href="mailto:duwz730@gmail.com">Email Me</a>
+            <a class="cta magnet" href="mailto:d.weizhi@wustl.edu">Email Me</a>
           </div>
         </aside>
       </div>
@@ -129,12 +148,11 @@
     <div class="bg-img bg-skills" aria-hidden="true"></div>
     <div class="container" data-reveal>
       <div class="head">
-        <h2 class="neon">Tech Stack — Orbit View</h2>
+        <h2 class="neon">Tech Stack</h2>
         <p class="lead">Hover any tag to see my comfort level; the ring and label live-update.</p>
       </div>
 
       <div class="skills">
-        <!-- Programming -->
         <div class="orbit glass" data-default-name="Programming" data-default-p="90">
           <div class="ring" style="--p:90">
             <div class="center">
@@ -154,7 +172,6 @@
           </div>
         </div>
 
-        <!-- ML/Data -->
         <div class="orbit glass" data-default-name="ML / Data" data-default-p="86">
           <div class="ring" style="--p:86">
             <div class="center">
@@ -174,7 +191,6 @@
           </div>
         </div>
 
-        <!-- Systems / Cloud -->
         <div class="orbit glass" data-default-name="Systems & Cloud" data-default-p="82">
           <div class="ring" style="--p:82">
             <div class="center">
@@ -197,8 +213,9 @@
     </div>
   </section>
 
-  <!-- TIMELINE -->
-  <section id="timeline" aria-label="Timeline">
+  <!-- TIMELINE / EXPERIENCE -->
+  <section id="timeline" aria-label="Timeline" style="position:relative;">
+    <div class="bg-img bg-exp" aria-hidden="true"></div>
     <div class="container" data-reveal>
       <div class="head">
         <h2 class="neon">Journey — Spotlight Timeline</h2>
@@ -209,12 +226,18 @@
         <div class="timeline-col glass">
           <div class="tline" aria-hidden="true"></div>
 
-          <article class="ms glass" data-year="2025">
-            <div class="date">Sepetember 2025</div>
-            <h4 class="place">WashU Medicine</h4>
-            <div class="role">Research Assistant</div>
+          <article class="ms glass" data-year="2026">
+            <div class="date">May 2026</div>
+            <h4 class="place">TikTok</h4>
+            <div class="role">Incoming Machine Learning Engineer Intern</div>
           </article>
-          
+
+          <article class="ms glass" data-year="2025">
+            <div class="date">September 2025</div>
+            <h4 class="place">WashU School of Medicine</h4>
+            <div class="role">Undergraduate Research Assistant</div>
+          </article>
+
           <article class="ms glass" data-year="2025">
             <div class="date">June 2025</div>
             <h4 class="place">Meituan</h4>
@@ -226,23 +249,11 @@
             <h4 class="place">WashU McKelvey School of Engineering</h4>
             <div class="role">Head Teaching Assistant</div>
           </article>
-          
+
           <article class="ms glass" data-year="2024">
             <div class="date">December 2024</div>
             <h4 class="place">WashU Computational Imaging Group</h4>
             <div class="role">Undergraduate Researcher</div>
-          </article>
-
-          <article class="ms glass" data-year="2024">
-            <div class="date">June 2024</div>
-            <h4 class="place">Binxin Technology</h4>
-            <div class="role">AI Software Developer Intern</div>
-          </article>
-
-          <article class="ms glass" data-year="2024">
-            <div class="date">February 2024</div>
-            <h4 class="place">CamPass</h4>
-            <div class="role">Startup Founder</div>
           </article>
 
           <article class="ms glass" data-year="2024">
@@ -287,13 +298,13 @@
         <article class="card glass current">
           <span class="badge">Head TA</span>
           <h3 style="margin:.5rem 0 0">CSE 247 — Data Structures & Algorithms</h3>
-          <p class="lead">[Spring 2024 - Fall 2025] Lead all studio sections, run grading, host office hours, support course infra for 300+ students per semester.</p>
+          <p class="lead">[Spring 2024 - Spring 2026] Lead all studio sections, run grading, host office hours, support course infra for 300+ students per semester.</p>
         </article>
 
         <article class="card glass current">
           <span class="badge">TA</span>
           <h3 style="margin:.5rem 0 0">CSE 514 - Data Mining</h3>
-          <p class="lead">[Fall 2025] Office hours: Mon 1:00 - 2:30 PM, McKelvey 1037.</p>
+          <p class="lead">[Fall 2025] Managed grading and hosted office hours, guided students on data analysis and machine learning methods.</p>
         </article>
 
         <article class="card glass current">
@@ -318,7 +329,8 @@
   </section>
 
   <!-- AWARDS -->
-  <section id="awards" aria-label="Awards">
+  <section id="awards" aria-label="Awards" style="position:relative;">
+    <div class="bg-img bg-awards" aria-hidden="true"></div>
     <div class="container" data-reveal>
       <div class="head">
         <h2 class="neon">Honors & Awards</h2>
@@ -355,74 +367,72 @@
     <div class="container" data-reveal>
       <div class="head">
         <h2 class="neon">Let’s build something</h2>
-        <p class="lead">Best way to reach me is email and LinkedIn.</p>
+        <p class="lead">Please don’t get overly creative with the spelling of my first name.</p>
       </div>
 
       <div class="contact-wrap">
         <div class="glass" style="padding:18px;">
           <h3 style="margin-top:0">Contact Info</h3>
           <ul style="line-height:1.9">
-            <li>Email: <a id="emailLink" href="mailto:duwz730@gmail.com"><strong>duwz730@gmail.com</strong></a> <button id="copyBtn" class="copy" title="Copy email">Copy</button></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/duw" target="_blank"><strong>linkedin.com/in/duw</strong></a></li>
-            <li>GitHub: <a href="https://github.com/Weizhi-Du" target="_blank"><strong>github.com/Weizhi-Du</strong></a></li>
+            <li>Email: <a id="emailLink" href="mailto:d.weizhi@wustl.edu"><strong>d.weizhi@wustl.edu</strong></a> <button id="copyBtn" class="copy" title="Copy email">Copy</button></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/duw" target="_blank" rel="noreferrer"><strong>linkedin.com/in/duw</strong></a></li>
+            <li>GitHub: <a href="https://github.com/Weizhi-Du" target="_blank" rel="noreferrer"><strong>github.com/Weizhi-Du</strong></a></li>
             <li>Location: 1 Brookings Dr, St. Louis, MO 63130</li>
-            <li>Music: tap the 🎵 bubble below</li>
+            <li>Off-hours: I write <a href="https://youtu.be/LlOtNPahxm8" target="_blank" rel="noreferrer"><strong>lyrics</strong></a>, cook, backpack through Death Valley, and gravitate toward moody, poetic storytelling like Yorushika. Often with my cat nearby.</li>
           </ul>
         </div>
 
-        <div class="map">
-          <iframe title="Map of Washington University in St. Louis"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12958.45601911814!2d-90.3130505719672!3d38.646665529626986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b5460f9c0fcf%3A0x94fa9481183c7669!2sWashington%20University%20in%20St.%20Louis!5e0!3m2!1sen!2sus!4v1743054103433!5m2!1sen!2sus"
-            width="100%" height="340" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="glass year-card" aria-label="Your Year with ChatGPT image">
+          <figure>
+            <img
+              class="year-img"
+              src="assets/images/year2025-chatgpt.png"
+              width="932"
+              height="928"
+              alt="Your Year with ChatGPT recap image"
+              loading="lazy"
+            />
+            <div class="img-cite">Source: OpenAI, “Your Year with ChatGPT”, 2025.</div>
+          </figure>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- PERSONAL VIBES -->
-  <section id="vibes" aria-label="Vibes">
-    <div class="container" data-reveal>
-      <div class="head">
-        <h2 class="neon">Vibes — A Bit More Human</h2>
-        <p class="lead">The little things that fuel my bigger things. Sometimes I pretend to be a designer.</p>
-      </div>
-      <div class="grid">
-        <div class="card glass">
-          <h3>Favorite Musician</h3>
-          <p class="lead">Yorushika — Poetic ache, wistful storytelling, and that mix of lightness and longing that just lingers.</p>
-        </div>
-        <div class="card glass">
-          <h3>On Repeat</h3>
-          <p class="lead">“That's why I gave up on music.” 897 times. Tap the 🎵 bubble.</p>
-        </div>
-        <div class="card glass">
-          <h3>Low-Fi Joys</h3>
-          <p class="lead">Long walks at dusk, soft light on old lenses, and a little Touhou nostalgia to end the day.</p>
-        </div>
-      </div>
+    <!-- Footer now shares Contact background -->
+    <div class="container">
+      <footer class="site-footer" aria-label="Footer">
+        © Weizhi Du 2026 · <a href="mailto:d.weizhi@wustl.edu">Email</a> ·
+        <a href="https://www.linkedin.com/in/duw" target="_blank" rel="noreferrer">LinkedIn</a>
+      </footer>
     </div>
   </section>
-
-  <footer aria-label="Footer">
-    © Weizhi Du 2025 · <a href="mailto:d.weizhi@wustl.edu">Email</a> · <a href="https://www.linkedin.com/in/duw" target="_blank">LinkedIn</a>
-  </footer>
 
   <!-- MUSIC WIDGET -->
   <div id="music-card" class="music-card glass">
     <div class="song-cover-wrapper"><img class="song-cover" src="assets/images/music_cover.jpg" alt="Song cover"></div>
     <p class="song-status" id="song-status">Paused “Tori no Uta”</p>
   </div>
-  <div id="music-button" class="music-button" aria-label="Toggle music">🎵</div>
+
+  <!-- Go to top -->
+  <div id="topBtn" class="music-button top-button" aria-label="Go to top" title="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6 14l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- Music button -->
+  <div id="music-button" class="music-button music-main" aria-label="Toggle music" title="Music">🎵</div>
   <audio id="audio-player" src="assets/music/Tori_no_Uta.mp3" loop></audio>
 
   <!-- COMMAND PALETTE -->
   <div class="kbar" id="kbar" role="dialog" aria-modal="true" aria-label="Command palette">
     <div class="box">
-      <input id="kbar-input" placeholder="Jump to… (About, Skills, Timeline, Teaching, Awards, Contact, Vibes)" aria-label="Type a section name…">
+      <input id="kbar-input" placeholder="Jump to… (About, Skills, Timeline, Teaching, Awards, Contact)" aria-label="Type a section name…">
       <div class="list" id="kbar-list"></div>
     </div>
   </div>
 
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
+
