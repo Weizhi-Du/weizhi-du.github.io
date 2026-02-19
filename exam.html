@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Proctoring Display</title>
+  <style>
+    :root{
+      /* Light default */
+      --bg: #f6f8fc;
+      --bg2: #eef2f8;
+
+      /* Liquid glass */
+      --glassTop: rgba(255,255,255,0.78);
+      --glassMid: rgba(255,255,255,0.58);
+      --glassBot: rgba(255,255,255,0.44);
+
+      --stroke: rgba(15, 23, 42, 0.10);
+      --stroke2: rgba(15, 23, 42, 0.14);
+
+      --text: rgba(15, 23, 42, 0.92);
+      --muted: rgba(15, 23, 42, 0.62);
+      --faint: rgba(15, 23, 42, 0.45);
+
+      --shadow: 0 22px 70px rgba(15, 23, 42, 0.16);
+      --shadow2: 0 12px 30px rgba(15, 23, 42, 0.10);
+
+      --radius: 28px;
+      --pad: 28px;
+
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+
+      --accent: rgba(59,130,246,0.90);
+      --accentSoft: rgba(59,130,246,0.16);
+      --ok: rgba(16,185,129,0.95);
+    }
+
+    body.dark{
+      --bg: #0b0f17;
+      --bg2: #0b1220;
+
+      --glassTop: rgba(17, 25, 40, 0.76);
+      --glassMid: rgba(17, 25, 40, 0.56);
+      --glassBot: rgba(17, 25, 40, 0.42);
+
+      --stroke: rgba(255,255,255,0.12);
+      --stroke2: rgba(255,255,255,0.16);
+
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.70);
+      --faint: rgba(255,255,255,0.48);
+
+      --shadow: 0 26px 80px rgba(0,0,0,0.50);
+      --shadow2: 0 14px 34px rgba(0,0,0,0.38);
+
+      --accent: rgba(96,165,250,0.95);
+      --accentSoft: rgba(96,165,250,0.16);
+    }
+
+    *{ box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--text);
+      background: radial-gradient(1200px 700px at 25% 0%, rgba(59,130,246,0.10), transparent 60%),
+                  radial-gradient(1000px 700px at 85% 15%, rgba(16,185,129,0.08), transparent 62%),
+                  linear-gradient(180deg, var(--bg), var(--bg2));
+      display: grid;
+      place-items: center;
+      padding: 22px;
+    }
+    body.dark{
+      background: radial-gradient(1200px 700px at 25% 0%, rgba(96,165,250,0.12), transparent 60%),
+                  radial-gradient(1000px 700px at 85% 15%, rgba(16,185,129,0.08), transparent 62%),
+                  linear-gradient(180deg, var(--bg), var(--bg2));
+    }
+
+    .app{
+      width: min(1500px, 100%);
+      display: grid;
+      gap: 18px;
+    }
+
+    /* Liquid glass card base */
+    .glass{
+      position: relative;
+      border-radius: var(--radius);
+      border: 1px solid var(--stroke);
+      background: linear-gradient(180deg, var(--glassTop), var(--glassMid) 45%, var(--glassBot));
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px) saturate(140%);
+      -webkit-backdrop-filter: blur(16px) saturate(140%);
+      overflow: hidden;
+      transform: translateZ(0);
+    }
+
+    .glass::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      pointer-events:none;
+      border-radius: calc(var(--radius) + 2px);
+      background:
+        radial-gradient(900px 260px at 18% 0%, rgba(255,255,255,0.55), transparent 62%),
+        radial-gradient(700px 200px at 88% 10%, rgba(255,255,255,0.28), transparent 62%);
+      opacity: 0.70;
+      mix-blend-mode: overlay;
+    }
+    body.dark .glass::before{
+      opacity: 0.28;
+      mix-blend-mode: screen;
+      background:
+        radial-gradient(900px 260px at 18% 0%, rgba(255,255,255,0.28), transparent 62%),
+        radial-gradient(700px 200px at 88% 10%, rgba(255,255,255,0.18), transparent 62%);
+    }
+
+    .glass::after{
+      content:"";
+      position:absolute;
+      inset: 1px;
+      border-radius: calc(var(--radius) - 1px);
+      border: 1px solid rgba(255,255,255,0.45);
+      opacity: 0.35;
+      pointer-events:none;
+    }
+    body.dark .glass::after{
+      border-color: rgba(255,255,255,0.20);
+      opacity: 0.35;
+    }
+
+    .topbar{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 16px;
+    }
+    .brand{
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      min-width: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .dot{
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: var(--ok);
+      box-shadow: 0 0 0 8px rgba(16,185,129,0.18);
+      flex: 0 0 auto;
+    }
+    .brand-title{
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      font-size: 16px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .actions{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      position: relative;
+      z-index: 1;
+    }
+    button{
+      appearance: none;
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,0.55);
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 14px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 650;
+      box-shadow: var(--shadow2);
+      backdrop-filter: blur(10px) saturate(140%);
+      -webkit-backdrop-filter: blur(10px) saturate(140%);
+      transition: transform .06s ease, background .15s ease, border-color .15s ease;
+    }
+    body.dark button{ background: rgba(17,25,40,0.62); }
+    button:hover{ background: rgba(255,255,255,0.72); }
+    body.dark button:hover{ background: rgba(17,25,40,0.78); }
+    button:active{ transform: translateY(1px); }
+
+    .grid{
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .card-header{
+      padding: 18px var(--pad);
+      border-bottom: 1px solid var(--stroke);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      position: relative;
+      z-index: 1;
+    }
+    .card-title{
+      font-size: 14px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 850;
+    }
+
+    /* CLOCK */
+    .clock{
+      padding: 22px var(--pad) 16px;
+      display: grid;
+      gap: 14px;
+      position: relative;
+      z-index: 1;
+      min-height: 560px;
+    }
+
+    .timeWrap{
+      display: grid;
+      gap: 8px;
+      align-content: start;
+    }
+
+    .time{
+      font-family: var(--mono);
+      font-size: clamp(52px, 5.1vw, 74px);
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      line-height: 0.98;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .ampm{
+      font-family: var(--mono);
+      font-size: clamp(34px, 3.2vw, 48px);
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      margin-top: -6px;
+      white-space: nowrap;
+    }
+
+    .date{
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .tz{
+      display: grid;
+      gap: 10px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--stroke2);
+      margin-top: 6px;
+    }
+    .tz-row{
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 15px;
+      min-width: 0;
+    }
+    .tz-row code{
+      font-family: var(--mono);
+      color: var(--text);
+      background: rgba(255,255,255,0.55);
+      border: 1px solid var(--stroke2);
+      padding: 6px 12px;
+      border-radius: 14px;
+      white-space: nowrap;
+      max-width: 260px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      backdrop-filter: blur(10px) saturate(140%);
+      -webkit-backdrop-filter: blur(10px) saturate(140%);
+    }
+    body.dark .tz-row code{ background: rgba(17,25,40,0.62); }
+
+    /* Email as subtle footer at bottom of entire time section */
+    .contactFooter{
+      margin-top: auto;                /* pushes to bottom */
+      padding-top: 12px;
+      border-top: 1px solid rgba(15,23,42,0.08);
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+      color: var(--faint);
+      font-size: 12px;                 /* small */
+    }
+    body.dark .contactFooter{
+      border-top-color: rgba(255,255,255,0.10);
+    }
+    .contactFooter a{
+      color: inherit;
+      text-decoration: none;
+      font-family: var(--mono);
+      opacity: 0.9;
+      border-bottom: 1px dashed rgba(15,23,42,0.18);
+    }
+    body.dark .contactFooter a{
+      border-bottom-color: rgba(255,255,255,0.18);
+    }
+    .contactFooter a:hover{
+      opacity: 1;
+      border-bottom-style: solid;
+    }
+
+    /* MAIN */
+    .main{
+      padding: 22px var(--pad) 28px;
+      display: grid;
+      gap: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    [contenteditable="true"]{
+      outline: none;
+      border-radius: 16px;
+      padding: 10px 12px;
+      margin-left: -12px;
+      margin-right: -12px;
+      transition: background .15s ease, box-shadow .15s ease;
+    }
+    [contenteditable="true"]:focus{
+      background: var(--accentSoft);
+      box-shadow: 0 0 0 2px rgba(59,130,246,0.28);
+    }
+    body.dark [contenteditable="true"]:focus{
+      box-shadow: 0 0 0 2px rgba(96,165,250,0.28);
+    }
+
+    .title{
+      font-size: clamp(40px, 3.2vw, 54px);
+      font-weight: 950;
+      letter-spacing: -0.02em;
+      line-height: 1.08;
+    }
+
+    .subtitle{
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.45;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .pill{
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--muted);
+      border: 1px solid var(--stroke2);
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.55);
+      backdrop-filter: blur(10px) saturate(140%);
+      -webkit-backdrop-filter: blur(10px) saturate(140%);
+    }
+    body.dark .pill{ background: rgba(17,25,40,0.62); }
+
+    .section{
+      padding-top: 14px;
+      border-top: 1px solid var(--stroke);
+      display: grid;
+      gap: 12px;
+    }
+
+    .instructions ul{
+      margin: 0;
+      padding-left: 24px;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+    .instructions li{ margin: 12px 0; }
+
+    .announcement{
+      border: 1px dashed var(--stroke2);
+      background: rgba(255,255,255,0.55);
+      border-radius: 18px;
+      padding: 14px 16px;
+      min-height: 70px;
+      display: grid;
+      gap: 8px;
+      backdrop-filter: blur(12px) saturate(140%);
+      -webkit-backdrop-filter: blur(12px) saturate(140%);
+    }
+    body.dark .announcement{ background: rgba(17,25,40,0.62); }
+
+    .announcement .label{
+      font-size: 13px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 850;
+    }
+    .announcement .content{
+      font-size: 20px;
+      line-height: 1.3;
+      color: var(--text);
+      min-height: 28px;
+    }
+    .announcement .content:empty::before{
+      content: "—";
+      color: var(--faint);
+    }
+
+    @media (max-width: 1020px){
+      .grid{ grid-template-columns: 1fr; }
+      .tz-row code{ max-width: 100%; }
+      .clock{ min-height: unset; }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .glass::before{ display:none; }
+      *{ scroll-behavior: auto !important; }
+    }
+
+    @media print{
+      body{ background: #fff !important; color: #000 !important; }
+      .topbar, .actions{ display: none !important; }
+      .glass{
+        box-shadow: none !important;
+        background: #fff !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+      }
+      .glass::before, .glass::after{ display:none !important; }
+      [contenteditable="true"]{ padding: 0 !important; margin: 0 !important; }
+      .pill, .tz-row code{ background: transparent !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    <div class="glass topbar">
+      <div class="brand">
+        <div class="dot" aria-hidden="true"></div>
+        <div class="brand-title">Proctoring Display</div>
+      </div>
+      <div class="actions">
+        <button id="themeBtn" type="button">Theme</button>
+        <button id="fullscreenBtn" type="button">Fullscreen</button>
+        <button id="resetBtn" type="button">Reset text</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- CLOCK -->
+      <section class="glass" aria-label="Current time">
+        <div class="card-header">
+          <div class="card-title">Current time</div>
+        </div>
+
+        <div class="clock">
+          <div class="timeWrap">
+            <div class="time" id="clockTime">--:--:--</div>
+            <div class="ampm" id="clockAmPm">--</div>
+          </div>
+
+          <div class="date" id="clockDate">—</div>
+
+          <div class="tz">
+            <div class="tz-row">
+              <span>Time zone</span>
+              <code id="clockTZ">—</code>
+            </div>
+            <div class="tz-row">
+              <span>UTC offset</span>
+              <code id="clockOffset">—</code>
+            </div>
+          </div>
+
+          <!-- subtle footer email -->
+          <div class="contactFooter">
+            <span>contact</span>
+            <span>Weizhi Du | d.weizhi@wustl.edu</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAIN CONTENT -->
+      <main class="glass" aria-label="Exam details">
+        <div class="card-header">
+          <div class="card-title">Exam details</div>
+        </div>
+
+        <div class="main">
+          <div>
+            <div class="title" id="examTitle" contenteditable="true" spellcheck="false">
+              CSE 2407: Exam 1
+            </div>
+
+            <div class="subtitle">
+              <span class="pill">Time</span>
+              <span id="examWindow" contenteditable="true" spellcheck="false">6:30 PM – 8:30 PM</span>
+              <span class="pill">Location</span>
+              <span id="examLocation" contenteditable="true" spellcheck="false">Simon 1</span>
+            </div>
+          </div>
+
+          <section class="section instructions">
+            <div class="card-title">Instructions</div>
+            <div id="instructions" contenteditable="true" spellcheck="false">
+              <ul>
+                <li>Sit exactly one seat apart and follow the proctors’ seating directions.</li>
+                <li>Put all personal belongings (including phones) at the front. Keep only student ID, writing utensils, and water.</li>
+                <li>No calculators or non-medical electronic devices.</li>
+                <li>Write your name on the top-left corner of every page.</li>
+                <li>Write your student ID on the cover (6-digit ID may be accepted).</li>
+                <li>Good luck and work quietly.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="announcement">
+            <div class="label">Announcement</div>
+            <div class="content" id="announcement" contenteditable="true" spellcheck="false"></div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // Resource saving:
+    // - Update clock at ~1Hz, aligned to second boundary
+    // - Pause updates when tab is hidden
+
+    const elTime = document.getElementById("clockTime");
+    const elAmPm = document.getElementById("clockAmPm");
+    const elDate = document.getElementById("clockDate");
+    const elTZ = document.getElementById("clockTZ");
+    const elOffset = document.getElementById("clockOffset");
+
+    function pad2(n){ return String(n).padStart(2, "0"); }
+
+    function utcOffsetString(d){
+      const mins = -d.getTimezoneOffset();
+      const sign = mins >= 0 ? "+" : "-";
+      const abs = Math.abs(mins);
+      return `UTC${sign}${pad2(Math.floor(abs/60))}:${pad2(abs%60)}`;
+    }
+
+    function updateClock(){
+      const now = new Date();
+
+      const parts = new Intl.DateTimeFormat(undefined, {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true
+      }).formatToParts(now);
+
+      const get = (type) => (parts.find(p => p.type === type)?.value ?? "");
+      elTime.textContent = `${get("hour")}:${get("minute")}:${get("second")}`;
+      elAmPm.textContent = get("dayPeriod") || "";
+
+      elDate.textContent = new Intl.DateTimeFormat(undefined, {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "2-digit",
+      }).format(now);
+
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "Local";
+      elTZ.textContent = tz;
+      elOffset.textContent = utcOffsetString(now);
+    }
+
+    let timer = null;
+
+    function scheduleTick(){
+      const now = Date.now();
+      const msToNextSecond = 1000 - (now % 1000);
+      timer = setTimeout(() => {
+        updateClock();
+        scheduleTick();
+      }, msToNextSecond + 5);
+    }
+
+    function start(){
+      if (timer !== null) return;
+      updateClock();
+      scheduleTick();
+    }
+
+    function stop(){
+      if (timer === null) return;
+      clearTimeout(timer);
+      timer = null;
+    }
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stop();
+      else start();
+    });
+
+    start();
+
+    // Reset editable content
+    const defaultState = {
+      examTitle: document.getElementById("examTitle").innerText,
+      examWindow: document.getElementById("examWindow").innerText,
+      examLocation: document.getElementById("examLocation").innerText,
+      instructions: document.getElementById("instructions").innerHTML
+    };
+
+    document.getElementById("resetBtn").addEventListener("click", () => {
+      document.getElementById("examTitle").innerText = defaultState.examTitle;
+      document.getElementById("examWindow").innerText = defaultState.examWindow;
+      document.getElementById("examLocation").innerText = defaultState.examLocation;
+      document.getElementById("instructions").innerHTML = defaultState.instructions;
+      document.getElementById("announcement").innerText = "";
+    });
+
+    // Theme (light default)
+    document.getElementById("themeBtn").addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+    });
+
+    // Fullscreen
+    document.getElementById("fullscreenBtn").addEventListener("click", async () => {
+      try{
+        if (!document.fullscreenElement) await document.documentElement.requestFullscreen();
+        else await document.exitFullscreen();
+      } catch(e){
+        alert("Fullscreen was blocked by the browser. Use your browser’s fullscreen shortcut.");
+      }
+    });
+  </script>
+</body>
+</html>
