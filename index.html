@@ -1,438 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
-  <meta name="description" content="Weizhi Du — Portfolio Lobby 3.2">
-  <link rel="icon" href="assets/images/dalle-2024-08-27-17.59.37-a-simple-colored-line-drawing-of-a-coffee-cup.-the-cup-is-more-defined-with-smooth-curves-a-visible-handle-and-a-small-amount-of-steam-rising-from-.jpg" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <meta
+    name="description"
+    content="Weizhi Du - Machine Learning Engineer Intern at TikTok Search working on fine ranking core algorithms; Computer Science and Financial Engineering undergraduate at Washington University in St. Louis."
+  />
+  <link
+    rel="icon"
+    href="assets/images/orange.png"
+  />
   <title>Weizhi Du</title>
-
   <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
 <body>
   <div id="top"></div>
-  <canvas id="stars"></canvas>
-  <div id="scrollbar"></div>
+  <div id="scrollbar" aria-hidden="true"></div>
 
-  <!-- NAV -->
-  <nav aria-label="Primary">
-    <div class="nav-wrap glass">
-      <div class="brand">
-        <img src="assets/images/pfp_orange.webp" alt="Weizhi avatar">
-        <div class="title">Weizhi Du</div>
-      </div>
+  <nav class="site-nav" aria-label="Primary">
+    <div class="nav-wrap">
+      <a class="brand" href="#profile" data-scroll aria-label="Weizhi Du home">
+        <span class="brand-mark">
+          <img class="avatar-orange" src="assets/images/pfp_orange.webp" alt="" />
+          <img class="avatar-real" src="assets/images/pfp_real.jpg" alt="" />
+        </span>
+        <span>Weizhi Du</span>
+      </a>
 
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
 
       <div class="nav-links" id="navLinks">
-        <span class="active-pill" id="activePill" aria-hidden="true"></span>
-        <a href="#about">About</a>
-        <a href="#skills" data-scroll>Skills</a>
-        <a href="#timeline" data-scroll>Timeline</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#awards">Awards</a>
-        <a href="#contact">Contact</a>
+        <a href="#profile" data-scroll>Profile</a>
+        <a href="#industry" data-scroll>Industry</a>
+        <a href="#research" data-scroll>Research</a>
+        <a href="#teaching" data-scroll>Teaching</a>
+        <a href="#honors" data-scroll>Honors</a>
+        <a href="#work" data-scroll>Impact</a>
+        <a href="#human" data-scroll>Human</a>
+        <a href="#contact" data-scroll>Contact</a>
       </div>
-
-      <a class="cta magnet" href="#" id="resumeBtn">Resume</a>
     </div>
   </nav>
 
-  <!-- Right rail elevator -->
-  <aside class="rail" aria-hidden="true">
-    <a href="#about" data-tip="About"></a>
-    <a href="#skills" data-tip="Skills"></a>
-    <a href="#timeline" data-tip="Timeline"></a>
-    <a href="#teaching" data-tip="Teaching"></a>
-    <a href="#awards" data-tip="Awards"></a>
-    <a href="#contact" data-tip="Contact"></a>
+  <aside class="rail" aria-label="Section shortcuts">
+    <a href="#profile" data-scroll data-tip="Profile"></a>
+    <a href="#industry" data-scroll data-tip="Industry"></a>
+    <a href="#research" data-scroll data-tip="Research"></a>
+    <a href="#teaching" data-scroll data-tip="Teaching"></a>
+    <a href="#honors" data-scroll data-tip="Honors"></a>
+    <a href="#work" data-scroll data-tip="Impact"></a>
+    <a href="#human" data-scroll data-tip="Human"></a>
+    <a href="#contact" data-scroll data-tip="Contact"></a>
   </aside>
 
-  <!-- HERO -->
-  <header class="hero" role="banner">
-    <div class="hero-bg" id="heroA" aria-hidden="true"></div>
-    <div class="hero-bg" id="heroB" aria-hidden="true"></div>
-
-    <div class="cmdk-banner">Press <strong>⌘</strong>/<strong>Ctrl</strong> + <strong>K</strong> to jump anywhere</div>
-    <!-- <div class="domain-pill tag">Software • AI/ML • Quant</div> -->
-
-    <div class="h-wrap container" data-reveal>
-      <h1 class="neon">Hey, I'm Weizhi — building at the edge of Software and AI.</h1>
-
-      <p class="subtitle">
-        Undergrad @ <b>Washington University in St. Louis</b> (CS + Financial Engineering).
-        Incoming Machine Learning Engineer Intern @ <b>TikTok</b>.
-        Prev Machine Learning Engineer Intern @ <b>Meituan</b>.
-        I ship full-stack systems, ML models, and quantitative tools.
-      </p>
-
-      <div class="chips">
-        <span class="tag">SWE</span>
-        <span class="tag">MLE</span>
-        <span class="tag">Head TA</span>
-        <span class="tag">LLMs</span>
-        <span class="tag">RAG • vLLM • LoRA</span>
+  <header class="hero" id="profile">
+    <div class="hero-noise" aria-hidden="true"></div>
+    <div class="container hero-grid" data-reveal>
+      <div class="hero-copy">
+        <div class="hero-main">
+          <p class="eyebrow">Machine Learning @ TikTok Search | CS + Financial Engineering @ WashU</p>
+          <h1>Weizhi Du</h1>
+          <p class="hero-statement">building AI systems people actually use.</p>
+        <p class="hero-lead">
+          LLM post-training, AI agents, retrieval and ranking, medical AI, and teaching, with industry work closest to real users.
+        </p>
+      </div>
       </div>
 
-      <div class="actions">
-        <a class="cta magnet" href="#skills" data-scroll>Tech Stack ⚙️</a>
-        <a class="cta magnet" href="#timeline" data-scroll>Journey ⏳</a>
-        <a class="cta magnet" href="#contact" data-scroll>Get in touch ✉️</a>
-      </div>
-
-      <div class="scroll-hint">
-        <div>Scroll</div>
-        <div class="chev"></div>
-      </div>
+      <aside class="ranking-lab" aria-label="Interactive ranking demo">
+        <div class="lab-header">
+          <span>Live Relevance Board</span>
+          <button id="rerankBtn" type="button">Re-rank</button>
+        </div>
+        <canvas id="rankerCanvas" width="720" height="420" aria-hidden="true"></canvas>
+        <div class="query-card" id="queryCard">
+          <span>query</span>
+          <strong id="queryText">high-signal ML engineer</strong>
+        </div>
+        <div class="rank-stack" id="rankStack">
+          <article class="rank-card" data-key="tiktok" data-base="99">
+            <span class="rank-index">01</span>
+            <div>
+              <strong>TikTok Search</strong>
+              <p>Fine ranking core algorithm</p>
+            </div>
+            <b>0.99</b>
+          </article>
+          <article class="rank-card" data-key="meituan" data-base="96">
+            <span class="rank-index">02</span>
+            <div>
+              <strong>Meituan LLM Post-Training</strong>
+              <p>SFT, DPO, distillation, enterprise AI</p>
+            </div>
+            <b>0.96</b>
+          </article>
+          <article class="rank-card" data-key="pet" data-base="92">
+            <span class="rank-index">03</span>
+            <div>
+              <strong>FDG-PET Agent</strong>
+              <p>Safety-aware medical AI</p>
+            </div>
+            <b>0.92</b>
+          </article>
+          <article class="rank-card" data-key="teaching" data-base="89">
+            <span class="rank-index">04</span>
+            <div>
+              <strong>Head TA</strong>
+              <p>Algorithms + cloud computing</p>
+            </div>
+            <b>0.89</b>
+          </article>
+          <article class="rank-card" data-key="systems" data-base="87">
+            <span class="rank-index">05</span>
+            <div>
+              <strong>Cloud + Quant Builder</strong>
+              <p>Distributed ML, systems, financial engineering</p>
+            </div>
+            <b>0.87</b>
+          </article>
+        </div>
+      </aside>
     </div>
+
+    <a class="scroll-cue show-word" href="#industry" data-scroll aria-label="Scroll to industry">
+      <span class="cue-word">    Scroll</span>
+      <span class="cue-mark" aria-hidden="true"></span>
+    </a>
   </header>
 
-  <!-- ABOUT -->
-  <section id="about" aria-label="About">
-    <div class="container" data-reveal>
-      <div class="head">
-        <h2 class="neon">A bit about me</h2>
-        <p class="lead">I love turning ideas into delightful systems, especially through data, algorithms, and models.</p>
-      </div>
+  <main>
+    <section id="industry" class="section industry-section">
+      <div class="container" data-reveal>
+        <div class="section-head wide">
+          <p class="eyebrow">Industry</p>
+          <h2>Undergrad ML engineer on core search algorithms at Silicon Valley scale.</h2>
+          <p>
+            My industry work has put me close to practical relevance problems: ranking quality at TikTok Search, plus
+            LLM post-training, model quality, and evaluation loops at Meituan.
+          </p>
+        </div>
 
-      <div class="about-grid">
-        <article class="about-card glass">
-          <h3 style="margin-top:0">Snapshot</h3>
+        <div class="industry-grid">
+          <article class="industry-card flagship tilt-card">
+            <div class="card-topline"><span>May 2026 - Aug. 2026</span><span>San Jose, CA</span></div>
+            <h3>TikTok</h3>
+            <p class="role">Machine Learning Engineer Intern, TikTok Search</p>
+            <div class="giant-word">fine ranking</div>
+            <p>
+              Working on the fine ranking core algorithm for TikTok Search, where user intent, relevance quality, and
+              large-scale ranking infrastructure meet.
+            </p>
+          </article>
 
-          <div class="about-badges" aria-label="Highlights">
-            <span class="tag">CS + Financial Engineering @ WashU</span>
-            <span class="tag">RA @ WashU Medicine</span>
-            <span class="tag">Head TA @ WashU</span>
-            <span class="tag">Incoming MLE Intern @ TikTok</span>
-            <span class="tag">Prev MLE Intern @ Meituan</span>
-            <span class="tag">Research • LLMs </span>
-          </div>
-
-          <div class="about-two">
-            <div class="mini">
-              <h4>Now</h4>
-              <ul>
-                <li>Building production-ish ML + systems with a bias for speed & clarity.</li>
-                <li>Interests: LLM orchestration, RAG, agentic systems.</li>
-              </ul>
+          <article class="industry-card meituan-card tilt-card">
+            <div class="card-topline"><span>Jun. 2025 - Aug. 2025</span><span>Beijing, China</span></div>
+            <h3>Meituan</h3>
+            <p class="role">Machine Learning Engineer Intern, Search and Content Intelligence</p>
+            <div class="impact-pills">
+              <span>LLM post-training</span>
+              <span>SFT + DPO</span>
+              <span>72B to 7B</span>
+              <span>35% latency cut</span>
+              <span>RAG 49.6% to 72.3%</span>
             </div>
-            <div class="mini">
-              <h4>Outside work</h4>
-              <ul>
-                <li>Songwriting • creative writing</li>
-                <li>Backpacking (Death Valley is a favorite)</li>
-                <li>Always learning, always shipping</li>
-              </ul>
+            <p>
+              Focused on LLM post-training and enterprise AI quality loops, with model compression, vLLM
+              inference, compliant PII handling, and retrieval evaluation around Meituan-scale products (770M+ users and 15M+ merchants).
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section research-section">
+      <div class="container" data-reveal>
+        <div class="section-head split">
+          <div>
+            <p class="eyebrow">Research</p>
+            <h2>Applied AI research with a reliability bias.</h2>
+          </div>
+          <p>
+            My research sits where agents meet accountability: medical image segmentation, grounded clinical reasoning,
+            retrieval, and restoration under hard evaluation.
+          </p>
+        </div>
+
+        <div class="research-grid">
+          <article class="research-card lead-research tilt-card">
+            <span>0.813</span>
+            <h3>FDG-PET Auto-Contouring Agent</h3>
+            <p>Test Dice from validation-gated, safety-aware self-improvement for tumor segmentation.</p>
+          </article>
+          <article class="research-card tilt-card">
+            <span>97.3%</span>
+            <h3>Radiation Oncology RAG</h3>
+            <p>Clinical QA accuracy on ACR TXIT with citation-grounded answer synthesis.</p>
+          </article>
+          <article class="research-card tilt-card">
+            <span>+1.58 dB</span>
+            <h3>DDIM Restoration</h3>
+            <p>Zero-shot restoration gains under severe Gaussian noise and compound degradation.</p>
+          </article>
+        </div>
+
+        <div class="publication-strip">
+          <div>
+            <strong>Submitted abstract</strong>
+            <span>Safety-aware agentic FDG-PET auto-contouring, sole first author, RRS 2025.</span>
+          </div>
+          <div>
+            <strong>Manuscript in preparation</strong>
+            <span>Self-evolving agentic RAG for radiation oncology reasoning, fourth author.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="teaching" class="section teaching-section">
+      <div class="container" data-reveal>
+        <div class="section-head wide">
+          <p class="eyebrow">Teaching</p>
+          <h2>Teaching is where my algorithms become explainable.</h2>
+          <p>
+            I have supported algorithms, cloud computing, data mining, ML, and statistics courses through recitations,
+            office hours, grading systems, exam support, rubric calibration, and TA mentorship.
+          </p>
+        </div>
+
+        <div class="teaching-grid">
+          <article class="teaching-card featured tilt-card">
+            <span>Head TA</span>
+            <h3>CSE 247: Data Structures and Algorithms</h3>
+            <p>Head TA across 5 semesters; each semester, I coordinated 30+ TAs, supported 200+ students, and led recitations that made proofs, runtime analysis, and implementation patterns feel usable.</p>
+          </article>
+          <article class="teaching-card tilt-card">
+            <span>Head TA</span>
+            <h3>CSE 427: Cloud Computing</h3>
+            <p>Head TA for 1 semester; helped students reason through cloud projects, infrastructure debugging, and system tradeoffs.</p>
+          </article>
+          <article class="teaching-card tilt-card">
+            <span>TA</span>
+            <h3>ESE 326: Probability and Statistics</h3>
+            <p>Clarified probability and statistics through office hours, exam support, and rubric calibration.</p>
+          </article>
+          <article class="teaching-card tilt-card">
+            <span>TA</span>
+            <h3>CSE 514: Data Mining</h3>
+            <p>Guided applied data mining work, ML assignments, and grading consistency.</p>
+          </article>
+          <article class="teaching-card tilt-card">
+            <span>TA</span>
+            <h3>ESE 417: Introduction to Machine Learning</h3>
+            <p>Supported model reasoning, programming assignments, and debugging sessions.</p>
+          </article>
+          <article class="teaching-card tilt-card">
+            <span>TA</span>
+            <h3>CSE 247R: DSA Seminar</h3>
+            <p>Led Data Structures and Algorithms practice from proof ideas to implementation instincts.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="honors" class="section honors-section">
+      <div class="container" data-reveal>
+        <div class="section-head wide">
+          <p class="eyebrow">Honors + Skills</p>
+          <h2>Credentials, tools, and the technical range behind the work.</h2>
+          <p>
+            This section is intentionally compact: enough signal for context, without turning the site into a transcript.
+          </p>
+        </div>
+
+        <div class="credentials-layout">
+          <div class="credential-grid">
+            <article class="credential-card award-card tilt-card">
+              <span>Academic Award</span>
+              <h3>Ernest D. Weiss Junior Award</h3>
+              <p>One junior selected across all six Computer Science & Engineering majors at WashU for academic excellence.</p>
+            </article>
+            <article class="credential-card tilt-card">
+              <span>Scholarship</span>
+              <h3>Howard Nemerov Scholar</h3>
+              <p>Four-year merit scholarship at Washington University in St. Louis.</p>
+            </article>
+            <article class="credential-card tilt-card">
+              <span>Consistency</span>
+              <h3>Dean's List</h3>
+              <p>Recognized every semester enrolled.</p>
+            </article>
+            <article class="credential-card tilt-card">
+              <span>Early Awards</span>
+              <h3>Pre-College Honors</h3>
+              <p>S.-T. Yau CS Gold Prize, MCM Honorable Mention, Physics Unlimited 11th in the U.S.</p>
+            </article>
+          </div>
+
+          <aside class="skill-console tilt-card">
+            <div class="console-top">
+              <span></span><span></span><span></span>
             </div>
-          </div>
-        </article>
-
-        <aside class="about-card glass">
-          <h3 style="margin-top:0">Quick Links</h3>
-          <div style="display:grid;gap:10px">
-            <a class="cta magnet" href="https://www.linkedin.com/in/duw" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="cta magnet" href="https://github.com/Weizhi-Du" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="cta magnet" href="mailto:d.weizhi@wustl.edu">Email Me</a>
-          </div>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" aria-label="Skills" style="position:relative;">
-    <div class="bg-img bg-skills" aria-hidden="true"></div>
-    <div class="container" data-reveal>
-      <div class="head">
-        <h2 class="neon">Tech Stack</h2>
-        <p class="lead">Hover any tag to see my comfort level; the ring and label live-update.</p>
-      </div>
-
-      <div class="skills">
-        <div class="orbit glass" data-default-name="Programming" data-default-p="90">
-          <div class="ring" style="--p:90">
-            <div class="center">
-              <h4 class="label">Programming</h4>
-              <small class="percent">~90%</small>
-            </div>
-          </div>
-          <div class="skill-tags">
-            <span tabindex="0" class="tag skill" data-name="Python" data-p="95">Python</span>
-            <span tabindex="0" class="tag skill" data-name="Java" data-p="90">Java</span>
-            <span tabindex="0" class="tag skill" data-name="C/C++" data-p="80">C/C++</span>
-            <span tabindex="0" class="tag skill" data-name="JavaScript" data-p="73">JavaScript</span>
-            <span tabindex="0" class="tag skill" data-name="HTML/CSS" data-p="78">HTML/CSS</span>
-            <span tabindex="0" class="tag skill" data-name="R" data-p="70">R</span>
-            <span tabindex="0" class="tag skill" data-name="MATLAB" data-p="78">MATLAB</span>
-            <span tabindex="0" class="tag skill" data-name="Bash" data-p="83">Bash</span>
-          </div>
-        </div>
-
-        <div class="orbit glass" data-default-name="ML / Data" data-default-p="86">
-          <div class="ring" style="--p:86">
-            <div class="center">
-              <h4 class="label">ML / Data</h4>
-              <small class="percent">~86%</small>
-            </div>
-          </div>
-          <div class="skill-tags">
-            <span tabindex="0" class="tag skill" data-name="PyTorch" data-p="90">PyTorch</span>
-            <span tabindex="0" class="tag skill" data-name="TensorFlow" data-p="70">TensorFlow</span>
-            <span tabindex="0" class="tag skill" data-name="Scikit-learn" data-p="80">Scikit-learn</span>
-            <span tabindex="0" class="tag skill" data-name="Hugging Face" data-p="85">Hugging Face</span>
-            <span tabindex="0" class="tag skill" data-name="OpenCV" data-p="78">OpenCV</span>
-            <span tabindex="0" class="tag skill" data-name="NumPy" data-p="90">NumPy</span>
-            <span tabindex="0" class="tag skill" data-name="Pandas" data-p="90">Pandas</span>
-            <span tabindex="0" class="tag skill" data-name="Matplotlib" data-p="87">Matplotlib</span>
-          </div>
-        </div>
-
-        <div class="orbit glass" data-default-name="Systems & Cloud" data-default-p="82">
-          <div class="ring" style="--p:82">
-            <div class="center">
-              <h4 class="label">Systems & Cloud</h4>
-              <small class="percent">~82%</small>
-            </div>
-          </div>
-          <div class="skill-tags">
-            <span tabindex="0" class="tag skill" data-name="Docker" data-p="88">Docker</span>
-            <span tabindex="0" class="tag skill" data-name="Kubernetes" data-p="81">Kubernetes</span>
-            <span tabindex="0" class="tag skill" data-name="AWS" data-p="82">AWS</span>
-            <span tabindex="0" class="tag skill" data-name="Azure" data-p="72">Azure</span>
-            <span tabindex="0" class="tag skill" data-name="MongoDB" data-p="75">MongoDB</span>
-            <span tabindex="0" class="tag skill" data-name="SQL" data-p="86">SQL</span>
-            <span tabindex="0" class="tag skill" data-name="GitLab CI/CD" data-p="82">GitLab CI/CD</span>
-            <span tabindex="0" class="tag skill" data-name="Linux" data-p="88">Linux</span>
-          </div>
+            <div class="skill-line"><b>Languages</b><span>Python, Java, C/C++, C#, JavaScript, SQL, R, MATLAB, Shell</span></div>
+            <div class="skill-line"><b>AI</b><span>PyTorch, TensorFlow, Hugging Face, MONAI, RAG, LLM fine-tuning, evals</span></div>
+            <div class="skill-line"><b>Systems</b><span>Linux, Docker, Kubernetes, AWS, GCP, Ray, FastAPI, PostgreSQL, MongoDB</span></div>
+          </aside>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- TIMELINE / EXPERIENCE -->
-  <section id="timeline" aria-label="Timeline" style="position:relative;">
-    <div class="bg-img bg-exp" aria-hidden="true"></div>
-    <div class="container" data-reveal>
-      <div class="head">
-        <h2 class="neon">Journey — Spotlight Timeline</h2>
-        <p class="lead">Milestones grow as you scroll.</p>
-      </div>
+    <section id="work" class="section work-section">
+      <div class="container" data-reveal>
+        <div class="section-head wide">
+          <p class="eyebrow">Impact Board</p>
+          <h2>Signal, scale, outcomes.</h2>
+        </div>
 
-      <div class="timeline-wrap">
-        <div class="timeline-col glass">
-          <div class="tline" aria-hidden="true"></div>
-
-          <article class="ms glass" data-year="2026">
-            <div class="date">May 2026</div>
-            <h4 class="place">TikTok</h4>
-            <div class="role">Incoming Machine Learning Engineer Intern</div>
+        <div class="work-grid" id="workGrid">
+          <article class="work-card spotlight tilt-card">
+            <div class="card-topline"><span>Industry</span><span>TikTok Search</span></div>
+            <h3>Fine Ranking Core Algorithm</h3>
+            <strong class="work-number">Current</strong>
+            <p>High-impact algorithm work inside one of the world's largest recommendation and search ecosystems.</p>
           </article>
-
-          <article class="ms glass" data-year="2025">
-            <div class="date">September 2025</div>
-            <h4 class="place">WashU School of Medicine</h4>
-            <div class="role">Undergraduate Research Assistant</div>
+          <article class="work-card tilt-card">
+            <div class="card-topline"><span>Industry</span><span>Meituan</span></div>
+            <h3>LLM Post-Training</h3>
+            <strong class="work-number">SFT + DPO</strong>
+            <p>Post-training, model quality, PII-safe enterprise use, and retrieval evaluation.</p>
           </article>
-
-          <article class="ms glass" data-year="2025">
-            <div class="date">June 2025</div>
-            <h4 class="place">Meituan</h4>
-            <div class="role">Machine Learning Engineer Intern</div>
+          <article class="work-card tilt-card">
+            <div class="card-topline"><span>Industry</span><span>LLM Systems</span></div>
+            <h3>72B to 7B Compression</h3>
+            <strong class="work-number">35%</strong>
+            <p>Latency reduction through inference and CUDA profiling work.</p>
           </article>
-
-          <article class="ms glass" data-year="2025">
-            <div class="date">April 2025</div>
-            <h4 class="place">WashU McKelvey School of Engineering</h4>
-            <div class="role">Head Teaching Assistant</div>
+          <article class="work-card tilt-card">
+            <div class="card-topline"><span>Research</span><span>Medical AI</span></div>
+            <h3>FDG-PET Auto-Contouring</h3>
+            <strong class="work-number">0.813</strong>
+            <p>Test Dice from a validation-gated self-improving agent framework.</p>
           </article>
-
-          <article class="ms glass" data-year="2024">
-            <div class="date">December 2024</div>
-            <h4 class="place">WashU Computational Imaging Group</h4>
-            <div class="role">Undergraduate Researcher</div>
+          <article class="work-card tilt-card">
+            <div class="card-topline"><span>Research</span><span>Clinical RAG</span></div>
+            <h3>Radiation Oncology Reasoning</h3>
+            <strong class="work-number">97.3%</strong>
+            <p>Accuracy on a radiation oncology benchmark with grounded retrieval.</p>
           </article>
-
-          <article class="ms glass" data-year="2024">
-            <div class="date">January 2024</div>
-            <h4 class="place">WashU McKelvey School of Engineering</h4>
-            <div class="role">Teaching Assistant; Academic Mentor</div>
+          <article class="work-card tilt-card">
+            <div class="card-topline"><span>Project</span><span>RL</span></div>
+            <h3>AlphaZero-Style Self-Play</h3>
+            <strong class="work-number">6.9x</strong>
+            <p>Training speedup for a large-action-space board-game agent.</p>
           </article>
-
-          <article class="ms glass" data-year="2023">
-            <div class="date">August 2023</div>
-            <h4 class="place">Washington University in St. Louis</h4>
-            <div class="role">B.S. in Computer Science; Second Major in Financial Engineering</div>
+          <article class="work-card tilt-card">
+            <div class="card-topline"><span>Project</span><span>Vision</span></div>
+            <h3>Training-Free Visual Grounding</h3>
+            <strong class="work-number">62.8%</strong>
+            <p>Acc@0.5 on RefCOCO-M validation queries.</p>
           </article>
-
-          <article class="ms glass" data-year="2020">
-            <div class="date">August 2020</div>
-            <h4 class="place">The Athenian School</h4>
-            <div class="role">High School Student</div>
+          <article class="work-card tilt-card">
+            <div class="card-topline"><span>Project</span><span>Cloud</span></div>
+            <h3>Cloud-Native ML Platform</h3>
+            <strong class="work-number">GKE</strong>
+            <p>Ray, KubeRay, FastAPI, and artifact pipelines for distributed ML training.</p>
           </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- TEACHING -->
-  <section id="teaching" aria-label="Teaching" style="position:relative;">
-    <div class="bg-img bg-teach" aria-hidden="true"></div>
-    <div class="container" data-reveal>
-      <div class="head">
-        <h2 class="neon">Teaching</h2>
-        <p class="lead">I lead, mentor, and build course infra. Ping me about projects or research!</p>
-      </div>
-
-      <div class="filters" aria-label="Teaching filters">
-        <button class="chip active" data-filter="all">All</button>
-        <button class="chip" data-filter="current">Current</button>
-        <button class="chip" data-filter="prev">Previous</button>
-      </div>
-      <br/>
-
-      <div class="grid" id="teachingGrid">
-        <article class="card glass current">
-          <span class="badge">Head TA</span>
-          <h3 style="margin:.5rem 0 0">CSE 247 — Data Structures & Algorithms</h3>
-          <p class="lead">[Spring 2024 - Spring 2026] Lead all studio sections, run grading, host office hours, support course infra for 300+ students per semester.</p>
-        </article>
-
-        <article class="card glass current">
-          <span class="badge">TA</span>
-          <h3 style="margin:.5rem 0 0">CSE 514 - Data Mining</h3>
-          <p class="lead">[Fall 2025] Managed grading and hosted office hours, guided students on data analysis and machine learning methods.</p>
-        </article>
-
-        <article class="card glass current">
-          <span class="badge">Grading TA</span>
-          <h3 style="margin:.5rem 0 0">ESE 417 - Intro to Machine Learning</h3>
-          <p class="lead">[Fall 2025] Manage grading for written and programming assignments.</p>
-        </article>
-
-        <article class="card glass prev">
-          <span class="badge gray">Prev Assistant Instructor</span>
-          <h3 style="margin:.5rem 0 0">ESE 326 - Probability and Statistics for Engineers</h3>
-          <p class="lead">[Spring 2025] Hosted office hours and subsections.</p>
-        </article>
-
-        <article class="card glass prev">
-          <span class="badge gray">Prev TA</span>
-          <h3 style="margin:.5rem 0 0">CSE 247R - Seminar: Data Structures and Algorithms</h3>
-          <p class="lead">[Spring 2025 - Fall 2024] Lectured the main sections.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- AWARDS -->
-  <section id="awards" aria-label="Awards" style="position:relative;">
-    <div class="bg-img bg-awards" aria-hidden="true"></div>
-    <div class="container" data-reveal>
-      <div class="head">
-        <h2 class="neon">Honors & Awards</h2>
-        <p class="lead">A few highlights that shaped my craft.</p>
-      </div>
-      <div class="grid">
-        <div class="card glass">
-          <h3>S.-T. Yau Science Awards (CS)</h3>
-          <p class="lead">Gold Prize (Top 1%)</p>
-        </div>
-        <div class="card glass">
-          <h3>Mathematical Contest in Modeling</h3>
-          <p class="lead">Honorable Mention</p>
-        </div>
-        <div class="card glass">
-          <h3>Physics Unlimited Premier Competition</h3>
-          <p class="lead">11th in North America</p>
-        </div>
-        <div class="card glass">
-          <h3>Howard Nemerov Scholarship</h3>
-          <p class="lead">4-Year Scholarship @ WashU</p>
-        </div>
-        <div class="card glass">
-          <h3>Dean’s List</h3>
-          <p class="lead">All semesters @ WashU</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" aria-label="Contact" style="position:relative;">
-    <div class="bg-img bg-contact" aria-hidden="true"></div>
-    <div class="container" data-reveal>
-      <div class="head">
-        <h2 class="neon">Let’s build something</h2>
-        <p class="lead">Please don’t get overly creative with the spelling of my first name.</p>
-      </div>
-
-      <div class="contact-wrap">
-        <div class="glass" style="padding:18px;">
-          <h3 style="margin-top:0">Contact Info</h3>
-          <ul style="line-height:1.9">
-            <li>Email: <a id="emailLink" href="mailto:d.weizhi@wustl.edu"><strong>d.weizhi@wustl.edu</strong></a> <button id="copyBtn" class="copy" title="Copy email">Copy</button></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/duw" target="_blank" rel="noreferrer"><strong>linkedin.com/in/duw</strong></a></li>
-            <li>GitHub: <a href="https://github.com/Weizhi-Du" target="_blank" rel="noreferrer"><strong>github.com/Weizhi-Du</strong></a></li>
-            <li>Location: 1 Brookings Dr, St. Louis, MO 63130</li>
-            <li>Off-hours: I write <a href="https://youtu.be/LlOtNPahxm8" target="_blank" rel="noreferrer"><strong>lyrics</strong></a>, cook, backpack through Death Valley, and gravitate toward moody, poetic storytelling like Yorushika. Often with my cat nearby.</li>
-          </ul>
+    <section id="human" class="section human-section">
+      <div class="container human-layout" data-reveal>
+        <div class="human-copy">
+          <p class="eyebrow">Off Hours</p>
+          <h2>Still a person after the metrics.</h2>
+          <p>
+            I write lyrics, cook, backpack through Death Valley, and gravitate toward moody, poetic storytelling like Yorushika. Often with my cat nearby.
+          </p>
         </div>
 
-        <div class="glass year-card" aria-label="Your Year with ChatGPT image">
-          <figure>
-            <img
-              class="year-img"
-              src="assets/images/year2025-chatgpt.png"
-              width="932"
-              height="928"
-              alt="Your Year with ChatGPT recap image"
-              loading="lazy"
-            />
-            <div class="img-cite">OpenAI, “Your Year with ChatGPT,” 2025.</div>
-          </figure>
+        <figure class="gpt-card tilt-card">
+          <img
+            src="assets/images/year2025-chatgpt.png"
+            width="932"
+            height="928"
+            alt="Your Year with ChatGPT recap image"
+            loading="lazy"
+          />
+          <figcaption>"Your Year with ChatGPT," 2025.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-layout" data-reveal>
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Say hi.</h2>
+          <p>
+            Talk to me about research, internships, projects, classes, or any topics you are excited about.
+            I am always happy to meet and build!
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-row">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+            </span>
+            <a href="mailto:d.weizhi@wustl.edu">d.weizhi@wustl.edu</a>
+            <button class="copy-button" id="copyBtn" type="button">Copy</button>
+          </div>
+          <a class="contact-row" href="https://linkedin.com/in/duw" target="_blank" rel="noreferrer">
+            <span class="contact-icon text-icon" aria-hidden="true">in</span>
+            <span>linkedin.com/in/duw</span>
+          </a>
+          <a class="contact-row" href="https://github.com/Weizhi-Du" target="_blank" rel="noreferrer">
+            <span class="contact-icon text-icon" aria-hidden="true">gh</span>
+            <span>github.com/Weizhi-Du</span>
+          </a>
+          <div class="contact-row">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 21s7-5.2 7-12A7 7 0 0 0 5 9c0 6.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.2"/></svg>
+            </span>
+            <span>San Jose, CA</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Footer now shares Contact background -->
-    <div class="container">
-      <footer class="site-footer" aria-label="Footer">
-        © Weizhi Du 2026 · <a href="mailto:d.weizhi@wustl.edu">Email</a> ·
-        <a href="https://www.linkedin.com/in/duw" target="_blank" rel="noreferrer">LinkedIn</a>
+      <footer class="site-footer">
+        <span>&copy; <span id="year">2026</span> Weizhi Du</span>
       </footer>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- MUSIC WIDGET -->
-  <div id="music-card" class="music-card glass">
-    <div class="song-cover-wrapper"><img class="song-cover" src="assets/images/music_cover.jpg" alt="Song cover"></div>
-    <p class="song-status" id="song-status">Paused “Tori no Uta”</p>
-  </div>
-
-  <!-- Go to top -->
-  <div id="topBtn" class="music-button top-button" aria-label="Go to top" title="Back to top">
+  <button id="topBtn" class="top-button" type="button" aria-label="Back to top">
     <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M6 14l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M6 14l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
-  </div>
+  </button>
 
-  <!-- Music button -->
-  <div id="music-button" class="music-button music-main" aria-label="Toggle music" title="Music">🎵</div>
-  <audio id="audio-player" src="assets/music/Tori_no_Uta.mp3" loop></audio>
-
-  <!-- COMMAND PALETTE -->
   <div class="kbar" id="kbar" role="dialog" aria-modal="true" aria-label="Command palette">
-    <div class="box">
-      <input id="kbar-input" placeholder="Jump to… (About, Skills, Timeline, Teaching, Awards, Contact)" aria-label="Type a section name…">
-      <div class="list" id="kbar-list"></div>
+    <div class="kbar-box">
+      <input id="kbarInput" placeholder="Jump to Industry, Research, Teaching, Honors..." aria-label="Type a section name" />
+      <div class="kbar-list" id="kbarList"></div>
     </div>
   </div>
 
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-
