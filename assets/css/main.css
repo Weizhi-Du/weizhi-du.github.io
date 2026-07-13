@@ -974,6 +974,8 @@ p {
 
 .teaching-card.featured {
   grid-row: span 2;
+  display: flex;
+  flex-direction: column;
   color: #fff;
   background:
     radial-gradient(circle at 86% 18%, rgba(96, 165, 250, 0.24), transparent 16rem),
@@ -985,6 +987,21 @@ p {
 .teaching-card.featured p,
 .teaching-card.featured span {
   color: #fff;
+}
+
+.teaching-mini-link {
+  width: max-content;
+  margin-top: auto;
+  padding-top: 18px;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 0.78rem;
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.teaching-mini-link:hover {
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .teaching-card span {
@@ -1281,12 +1298,24 @@ a.contact-row {
   margin: 30px auto 0;
   padding-top: 16px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
   color: rgba(255, 255, 255, 0.70);
   font-size: 0.9rem;
   text-align: center;
+}
+
+.footer-side-project {
+  color: rgba(255, 255, 255, 0.50);
+  font-size: 0.82rem;
+}
+
+.footer-side-project a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .top-button {
