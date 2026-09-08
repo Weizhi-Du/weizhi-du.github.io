@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#070b16" />
+    <meta
+      name="description"
+      content="LTY//26：二十六首中文 VOCALOID 歌曲。"
+    />
+    <meta property="og:title" content="LTY//26" />
+    <meta property="og:description" content="二十六首歌，四十种声音。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://weizhi-du.github.io/lty/" />
+    <meta property="og:image" content="https://weizhi-du.github.io/lty/lty-logo.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="LTY//26" />
+    <meta name="twitter:description" content="二十六首歌，四十种声音。" />
+    <meta name="twitter:image" content="https://weizhi-du.github.io/lty/lty-logo.png" />
+    <title>LTY//26</title>
+    <link rel="icon" href="lty-logo.png" type="image/png" />
+    <link rel="stylesheet" href="lty.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="scene" aria-hidden="true">
+      <div class="active-cover"><img id="activeCover" src="covers/01.jpg" alt="" /></div>
+      <canvas id="field"></canvas>
+      <div class="effect-layer effect-a"></div>
+      <div class="effect-layer effect-b"></div>
+      <div class="grain"></div>
+      <div class="scanlines"></div>
+    </div>
+
+    <header class="masthead">
+      <button class="identity" id="homeButton" type="button" aria-label="回到全部歌曲">
+        <img src="lty-logo.png" alt="" />
+        <span>
+          <b>LTY//26</b>
+        </span>
+      </button>
+
+    </header>
+
+    <section class="home-screen" id="homeScreen" aria-labelledby="homeTitle">
+      <h1 class="visually-hidden" id="homeTitle">LTY//26</h1>
+      <div class="home-catalog" id="homeCatalog" role="list"></div>
+    </section>
+
+    <main class="edition-room" id="editionRoom" aria-labelledby="dialogTitle" aria-hidden="true">
+      <div class="dialog-backdrop"></div>
+      <section class="dialog-panel">
+        <div class="track-rail" id="trackRail">
+          <button class="rail-current" id="railCurrent" type="button" aria-expanded="false" aria-controls="railNeighbors">
+            <span id="trackNumber">01</span><i>/</i><small>26</small>
+          </button>
+          <div class="rail-neighbors" id="railNeighbors"></div>
+        </div>
+
+        <header class="dialog-head">
+          <button class="close-button" type="button" data-close-dialog aria-label="回到全部歌曲">
+            <i aria-hidden="true">×</i>
+          </button>
+        </header>
+
+        <div class="dialog-body">
+          <div class="dialog-title-block">
+            <span class="dialog-index" id="dialogIndex">01 / 26</span>
+            <h1 id="dialogTitle">纯蓝</h1>
+            <p id="dialogEnglish">PURE BLUE</p>
+            <small>
+              <span>选择一种声音的形状</span>
+              <span>CHOOSE THE SHAPE OF THIS VOICE</span>
+            </small>
+          </div>
+          <div class="edition-list" id="editionList"></div>
+        </div>
+
+        <nav class="track-nav edition-nav" aria-label="切换歌曲">
+          <button id="previousSong" type="button" aria-label="上一首歌">
+            <span class="nav-arrow" aria-hidden="true">←</span>
+            <b id="previousTitle">为了你唱下去</b>
+          </button>
+          <button id="nextSong" type="button" aria-label="下一首歌">
+            <b id="nextTitle">蝴蝶</b>
+            <span class="nav-arrow" aria-hidden="true">→</span>
+          </button>
+        </nav>
+      </section>
+    </main>
+
+    <noscript>这个站点需要 JavaScript 来切换歌曲与版本。</noscript>
+  </body>
+</html>
