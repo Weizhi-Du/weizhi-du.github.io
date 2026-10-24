@@ -580,3 +580,9 @@ a.contact-row { grid-template-columns: 25px 1fr; }
   .motion-enabled main>.section>.container { translate: none; opacity: 1; }
   .industry-card, .project-card, .publication, .course-feature { break-inside: avoid; }
 }
+.publication-link { display: inline-flex; align-items: center; gap: 5px; margin-top: 3px; font-size: 1rem; font-weight: 600; color: #386a67; }
+
+.project-report-link { display: inline-flex; align-items: center; gap: 5px; margin-top: 12px; font-size: 1rem; font-weight: 600; color: #386a67; }
+
+/* One heading scale across the homepage sections. */
+.section h2 { font-size: clamp(2rem, 3vw, 2.6rem); line-height: 1.12; font-weight: 750; }

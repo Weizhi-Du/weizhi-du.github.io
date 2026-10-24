@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex"><meta name="referrer" content="no-referrer"><title>Self-Evolving Agentic Retrieval-Augmented Generation Enables High-Accuracy and Confidence-Aware Radiation Oncology Reasoning — Weizhi Du</title><link rel="stylesheet" href="../assets/research.css?v=20261023-authorship"><script src="../assets/research.js" defer></script></head>
+
+
+<body><a class="skip" href="#article">Skip to article</a><div class="reading-progress" aria-hidden="true"></div><header class="site-header"><div><nav class="brand" aria-label="Site navigation"><a class="wordmark" href="../../index.html">Weizhi Du</a><span class="brand-divider" aria-hidden="true">/</span><a class="research-home" href="../">Research</a></nav>
+</div></header>
+
+
+<main><div class="paper-header wrap"><a class="back-link" href="../">← Research collection</a><p class="eyebrow">Poster abstract · RRS 2026</p>
+
+
+<h1>Self-Evolving Agentic Retrieval-Augmented Generation Enables High-Accuracy and Confidence-Aware Radiation Oncology Reasoning</h1>
+
+
+<p class="paper-status">Co-author</p>
+
+
+<p class="authors"><strong><br></strong>Tingjun Liu, BS<sup>1,2</sup>, Xucheng Wang, BS<sup>1,3</sup>, Matthew Inkman, MS<sup>1</sup>, Andrew Willett, MD<sup>1,</sup><sup>7</sup>, Weizhi Du<sup>1,2</sup>, Julian C. Hong, MD, MS<sup>4,5,6</sup>, Michael R. Waters, MD, PhD<sup>1,</sup><sup>7</sup>, and Jin Zhang, PhD, MPHS<sup>1,</sup><sup>7,8</sup></p>
+
+
+<details class="author-details"><summary>Author affiliations</summary><div><p><sup><em>1</em></sup><em>Department of Radiation Oncology, Washington University School of Medicine, St. Louis, MO, 63108.</em></p>
+
+
+<p><sup><em>2</em></sup><em>Department of Computer Science, Washington University in St. Louis, St. Louis, MO, 63105.</em></p>
+
+
+<p><sup><em>3</em></sup><em>Department of Biomedical Informatics, Harvard Medical School, Boston, MA, 02115.</em></p>
+
+
+<p><sup><em>4</em></sup><em>Department of Radiation Oncology, University of California, San Francisco, San Francisco, CA, 94143.</em></p>
+
+
+<p><sup><em>5</em></sup><em>Bakar Computational Health Sciences Institute, University of California, San Francisco, San Francisco, CA, 94143.</em></p>
+
+
+<p><sup><em>6</em></sup><em>Joint Program in Computational Precision Health, University of California, Berkeley and San Francisco, Berkeley, CA, 94720.</em></p>
+
+
+<p><sup><em>7</em></sup><em>Alvin J. </em><em>Siteman</em><em> Cancer Center, Washington University in St. Louis, St. Louis, MO, 63110.</em></p>
+
+
+<p><sup><em>8</em></sup><em>Institute for Informatics, Data Science &amp; Biostatistics (I</em><sup><em>2</em></sup><em>DB), Washington University School of Medicine, St. Louis, MO, 63110.</em></p>
+
+
+</div></details>
+
+
+<aside class="draft-notice" aria-label="Publication status and permissions"><strong>Publication status and permissions</strong><p>This abstract has been accepted for poster presentation at the Radiation Research Society’s 2026 annual meeting. This page presents an author version. Copyright remains with the authors and applicable rights holders. Please do not redistribute or reuse text or figures without permission.</p>
+</aside>
+
+
+</div><div class="paper-layout wrap"><nav class="contents" aria-label="Article contents"><details open><summary>On this page</summary><div><a href="#abstract-section-1">Abstract</a><a href="#abstract-section-2">System overview</a></div></details>
+
+
+</nav>
+
+
+<article class="paper-body" id="article"><h2 id="abstract-section-1">Abstract</h2>
+
+
+<p><strong>Purpose/Objectives:</strong> Large language models (LLMs) have yet to reach their full potential in radiation oncology. In this highly technical subspecialty, clinical prompts remain particularly vulnerable to hallucination, outdated knowledge, and poor reliability estimation. To address these challenges, we developed <strong>eRT</strong><strong>-RAG</strong>, a self-evolving multi-agent retrieval-augmented generation framework for radiation oncology, and evaluated whether evidence-grounded agentic retrieval can achieve high accuracy while providing confidence-aware validation.</p>
+
+
+<p><strong>Materials/Methods:</strong> eRT-RAG integrates multi-agent query generation, curated retrieval from radiation oncology textbooks and NCCN guidelines, evidence-weighted answer aggregation, source citation, and self-evolving literature updates. We evaluated eRT-RAG on the 2021 ACR Radiation Oncology In-Training Examination (TXIT), consisting of 300 textual and multimodal multiple-choice questions. Accuracy was determined by the official answer key and compared with a non-retrieval baseline. To further simulate real-world radiation oncology decision support, we also tested eRT-RAG on multiple contemporary open-ended, clinically debatable radiation oncology questions.</p>
+
+
+<p><strong>Results:</strong> eRT-RAG achieved <strong>98.0% accuracy</strong> on TXIT, outperforming the non-retrieval baseline of 93% on GPT-5. Confidence scores were higher for correct than incorrect responses, and confidence-based discrimination of correctness achieved AUC of <strong>0.79</strong>, suggesting that system confidence can serve as a practical signal for identifying outputs requiring automated knowledge base updates and clinician review. In debatable, timely clinical questions, expert radiation oncologists rate eRT-RAG as providing more direct and thorough clinical assessments compared to available GPT models.</p>
+
+
+<p><strong>Conclusion:</strong> eRT-RAG achieved high accuracy in radiation oncology and provided confidence scores that effectively disciminate the reliability of responses. These findings support confidence-aware, evidence-grounded agentic RAG as a pathway toward safer and more clinically useful LLM support in radiation oncology. More broadly, this framework could be expanded to other niche, knowledge intensive clinical fields, where accurate, current, and confidence-aware decision support are required.</p>
+
+
+<h2 id="abstract-section-2">System overview</h2>
+
+
+<figure class="research-figure"><a class="figure-link" href="../assets/ert-rag-overview.webp" aria-label="Enlarge figure: eRT-RAG agent workflow, source retrieval, self-evolving updates, accuracy, and confidence analysis"><img src="../assets/ert-rag-overview.webp" alt="eRT-RAG agent workflow, source retrieval, self-evolving updates, accuracy, and confidence analysis" width="2728" height="3000" loading="lazy"><span class="enlarge">View full size ↗</span></a><figcaption>eRT-RAG retrieval and answer aggregation, self-evolving knowledge updates, and evaluation results.</figcaption></figure>
+
+
+<a class="back-link" href="../">← Selected works</a></article>
+
+
+</div></main>
+
+
+<dialog class="figure-dialog" aria-label="Enlarged figure"><button class="close-figure" autofocus>Close ×</button><div class="figure-viewport"><img alt=""></div><p>Scroll to inspect the full figure.</p>
+
+
+</dialog></body></html>

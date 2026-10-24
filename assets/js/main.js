@@ -51,6 +51,58 @@ const validationRoute = document.querySelector('.validation-route');
 const validationLength = validationRoute?.getTotalLength() || 0;
 let activeChapter = '';
 let scrollQueued = false;
+let heroIntroStarted = false;
+let heroIntroAnimations = [];
+
+function stopHeroIntro() {
+  heroIntroAnimations.forEach((animation) => animation.cancel());
+  heroIntroAnimations = [];
+  hero?.classList.remove('is-introducing');
+}
+
+function startHeroIntro() {
+  if (heroIntroStarted || !hero) return;
+  heroIntroStarted = true;
+  if (motion.matches || scrollY > 8 || !hero.animate) return;
+  const art = hero.querySelector('.hero-art');
+  if (!art || art.getBoundingClientRect().top >= innerHeight) return;
+  hero.classList.add('is-introducing');
+  const animate = (element, frames, options) => {
+    if (!element) return;
+    heroIntroAnimations.push(element.animate(frames, {
+      fill: 'backwards', easing: 'cubic-bezier(.22,.68,.25,1)', ...options,
+    }));
+  };
+  // Animate inner opacity and strokes so the scroll transforms stay independent.
+  hero.querySelectorAll('.sketch-reveal').forEach((stage, index) => {
+    animate(stage, [{ opacity: 0 }, { opacity: 1 }], { duration: 600, delay: index * 800 });
+    stage.querySelectorAll('.opening-path').forEach((path) => {
+      animate(path, [
+        { strokeDasharray: '1', strokeDashoffset: '1' },
+        { strokeDasharray: '1', strokeDashoffset: '0' },
+      ], { duration: 850, delay: index * 800 + 100 });
+    });
+  });
+  animate(rankingLink, [
+    { opacity: 0, strokeDasharray: '1', strokeDashoffset: '1' },
+    { opacity: 1, strokeDasharray: '1', strokeDashoffset: '0' },
+  ], { duration: 750, delay: 650 });
+  hero.querySelectorAll('.opening-stone').forEach((stone, index) => {
+    animate(stone, [{ opacity: 0 }, { opacity: 1 }], { duration: 220, delay: 1050 + index * 100 });
+  });
+  animate(hero.querySelector('.validation-gate'), [
+    { strokeWidth: '1.5', stroke: '#405b6b' },
+    { strokeWidth: '3', stroke: '#386a67', offset: .45 },
+    { strokeWidth: '1.5', stroke: '#405b6b' },
+  ], { duration: 650, delay: 2300 });
+  animate(hero.querySelector('.keep-outline'), [
+    { stroke: '#c66d42' }, { stroke: '#386a67', offset: .45 }, { stroke: '#c66d42' },
+  ], { duration: 650, delay: 2650 });
+  Promise.all(heroIntroAnimations.map((animation) => animation.finished)).then(() => {
+    heroIntroAnimations = [];
+    hero.classList.remove('is-introducing');
+  }).catch(() => { /* Scrolling or reduced-motion preference cancels the introduction. */ });
+}
 
 function updateSketchLink() {
   if (!landingSketch || !rankingDrawing || !boardDrawing || !rankingLink) return;
@@ -152,6 +204,7 @@ function updateScroll() {
   });
 }
 function queueScroll() {
+  if (scrollY > 8 && heroIntroAnimations.length) stopHeroIntro();
   if (!scrollQueued) { scrollQueued = true; requestAnimationFrame(updateScroll); }
 }
 window.addEventListener('scroll', queueScroll, { passive: true });
@@ -159,11 +212,15 @@ window.addEventListener('resize', queueScroll, { passive: true });
 window.addEventListener('load', queueScroll, { passive: true });
 document.addEventListener('toggle', queueScroll, true);
 motion.addEventListener('change', () => {
+  if (motion.matches) stopHeroIntro();
   document.documentElement.classList.toggle('motion-enabled', !motion.matches);
   if (motion.matches) targets.forEach((target) => target.classList.add('is-visible'));
   updateScroll();
 });
+window.addEventListener('beforeprint', stopHeroIntro);
+window.addEventListener('pagehide', stopHeroIntro);
 updateScroll();
+startHeroIntro();
 
 const copyButton = document.getElementById('copyBtn');
 let copyTimer;

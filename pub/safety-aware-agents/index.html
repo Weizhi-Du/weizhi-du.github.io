@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex"><meta name="referrer" content="no-referrer"><title>A Safety-Aware Agentic AI System for Refining FDG-PET Auto-Contouring in Locally Advanced Cervical Cancer — Weizhi Du</title><link rel="stylesheet" href="../assets/research.css?v=20261023-authorship"><script src="../assets/research.js" defer></script></head>
+
+
+<body><a class="skip" href="#article">Skip to article</a><div class="reading-progress" aria-hidden="true"></div><header class="site-header"><div><nav class="brand" aria-label="Site navigation"><a class="wordmark" href="../../index.html">Weizhi Du</a><span class="brand-divider" aria-hidden="true">/</span><a class="research-home" href="../">Research</a></nav>
+</div></header>
+
+
+<main><div class="paper-header wrap"><a class="back-link" href="../">← Research collection</a><p class="eyebrow">Poster abstract · RRS 2026</p>
+
+
+<h1>A Safety-Aware Agentic AI System for Refining FDG-PET Auto-Contouring in Locally Advanced Cervical Cancer</h1>
+
+
+<p class="paper-status">Sole first author</p>
+
+
+<p class="authors">Weizhi Du<sup>1,2</sup>, Tingjun Liu<sup>1,2</sup>, En Wei<sup>1,2</sup>, Andrew Willett<sup>1 </sup>MD, Matthew Inkman<sup>1</sup> MS, Xucheng Wang<sup>1,3</sup> BS, Thomas Mazur<sup>1</sup> PhD, Julie K. Schwarz<sup>1,4,5</sup> MD, PhD, Mengxin Yu<sup>6</sup> PhD, Jin Zhang<sup>1,4,7</sup> PhD, MPHS</p>
+
+
+<details class="author-details"><summary>Author affiliations and correspondence</summary><div><p>1. Department of Radiation Oncology, Washington University School of Medicine, St. Louis, MO 63108, USA</p>
+
+
+<p>2. Department of Computer Science and Engineering, Washington University in St. Louis, St. Louis, MO 63130, USA</p>
+
+
+<p>3. Department of Biomedical Informatics, Harvard Medical School, Boston, MA 02115, USA</p>
+
+
+<p>4. Alvin J. Siteman Cancer Center, Washington University School of Medicine, St. Louis, MO 63110, USA</p>
+
+
+<p>5. Department of Cell Biology and Physiology, Washington University School of Medicine, St. Louis, MO 63108, USA</p>
+
+
+<p>6. Department of Statistics and Data Science, Washington University in St. Louis, St. Louis, MO 63130, USA</p>
+
+
+<p>7. Institute for Informatics, Data Science and Biostatistics, Washington University School of Medicine, St. Louis, MO 63110, USA</p>
+
+
+<p><strong>Corresponding author:</strong> Jin Zhang, PhD, MPHS <a href="mailto:jin.zhang@wustl.edu" rel="noreferrer">jin.zhang@wustl.edu</a></p>
+
+
+<p><strong>Presenting author:</strong> Weizhi Du</p>
+
+
+</div></details>
+
+
+<aside class="draft-notice" aria-label="Publication status and permissions"><strong>Publication status and permissions</strong><p>This abstract has been accepted for poster presentation at the Radiation Research Society’s 2026 annual meeting. This page presents an author version. Copyright remains with the authors and applicable rights holders. Please do not redistribute or reuse text or figures without permission.</p>
+</aside>
+
+
+</div><div class="paper-layout wrap"><nav class="contents" aria-label="Article contents"><details open><summary>On this page</summary><div><a href="#agents-section-1">Abstract</a><a href="#agents-section-2">Method and results</a></div></details>
+
+
+</nav>
+
+
+<article class="paper-body" id="article"><h2 id="agents-section-1">Abstract</h2>
+
+
+<p>Precise tumor delineation is fundamental to effective radiotherapy planning. While PET imaging is a primary tool for this task, its accuracy can be compromised by high physiologic uptake in adjacent organs, which can obscure tumor margins. This is particularly relevant for locally advanced cervical cancer, where intense bladder activity often overlaps the tumor, complicating manual differentiation. Automated segmentation could address these challenges by distinguishing malignant tissue from its surroundings. However, unconstrained autonomous optimization is poorly suited for clinical use, as unchecked model changes may compromise validation and interpretability. We therefore developed a safety-aware agentic AI workflow to refine a strong segmentation baseline under auditable control.</p>
+
+
+<p>We evaluated our system on an FDG-PET cohort of 292 patients with locally advanced cervical cancer (211 training, 37 validation, 44 test cases). Our system used MONAI SegResNet as the foundation model, with the agent restricted to clinically interpretable refinement actions, including sliding-window overlap, test-time augmentation, checkpoint fine-tuning, and scheduler selection. The agent did not rewrite the pipeline; it proposed experiments, registered changes, evaluated results, and generated critiques under minimal clinician supervision.</p>
+
+
+<p>The frozen baseline achieved validation Dice of 0.7295. In contrast, a fully autonomous GPT-5.4 agent attempting unrestricted pipeline generation reached only 0.6818, significantly underperforming the baseline. Our proposed agentic AI system identified and experimented on inference-time refinements, improving baseline validation/test Dice to 0.7352 and 0.8107 without changing model weights. With human approval, the agent then performed low-learning-rate fine-tuning with cosine scheduling, which further improved validation/test Dice to the highest observed performance of 0.7455 and 0.8126.</p>
+
+
+<p>These findings show that a safety-aware agentic AI system offers a clinically credible path for AI integration in contouring workflows. By improving performance while preserving interpretability, validation discipline, and clinician oversight, this assistive workflow may facilitate model integration for clinically relevant PET contouring workflows.</p>
+
+
+<h2 id="agents-section-2">Method and results</h2>
+
+
+<figure class="research-figure"><a class="figure-link" href="../assets/safety-aware-agents.webp" aria-label="Enlarge figure: Safety-aware agent workflow with bounded refinement actions, validation guardrails, and segmentation results"><img src="../assets/safety-aware-agents.webp" alt="Safety-aware agent workflow with bounded refinement actions, validation guardrails, and segmentation results" width="3000" height="2250" loading="lazy"><span class="enlarge">View full size ↗</span></a><figcaption>Safety-aware refinement workflow, validation guardrails, and segmentation results.</figcaption></figure>
+
+
+<a class="back-link" href="../">← Selected works</a></article>
+
+
+</div></main>
+
+
+<dialog class="figure-dialog" aria-label="Enlarged figure"><button class="close-figure" autofocus>Close ×</button><div class="figure-viewport"><img alt=""></div><p>Scroll to inspect the full figure.</p>
+
+
+</dialog></body></html>
