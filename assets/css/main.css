@@ -586,3 +586,5 @@ a.contact-row { grid-template-columns: 25px 1fr; }
 
 /* One heading scale across the homepage sections. */
 .section h2 { font-size: clamp(2rem, 3vw, 2.6rem); line-height: 1.12; font-weight: 750; }
+
+.cv-main a { color: #386a67; text-decoration: underline; text-underline-offset: 4px; }

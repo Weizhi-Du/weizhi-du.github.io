@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Weizhi Du — AI research and engineering. Previously TikTok Search and Meituan. Reliable agents, multimodal learning, and medical AI at Washington University in St. Louis.">
     <meta name="theme-color" content="#faf8f3">
-    <meta property="og:title" content="Weizhi Du — AI Research & Engineering">
+    <meta property="og:title" content="Weizhi Du | Home">
     <meta property="og:description" content="Agents. Search. Multimodal learning. From research to real-world systems.">
     <meta property="og:type" content="website">
     <title>Weizhi Du | Home</title>
     <link rel="icon" href="assets/images/orange.png">
-    <link rel="stylesheet" href="assets/css/main.css?v=20261024-project-summary">
+    <link rel="stylesheet" href="assets/css/main.css?v=20261024-cv-sync">
     <script src="assets/js/main.js?v=20261023-home-intro" defer>
     </script>
   </head>
@@ -106,7 +106,7 @@
               </p>
             </article>
             <article class="industry-card meituan-card" data-reveal>
-              <div class="card-topline"><span>Jun. 2025 – Aug. 2025</span><span>Beijing, China</span></div>
+              <div class="card-topline"><span>Jun. 2025 - Aug. 2025</span><span>Beijing, China</span></div>
               <h3>Meituan</h3>
               <p class="role">Research Science Intern · Search &amp; Content Intelligence</p>
               <div class="giant-word">post-training</div>
@@ -140,9 +140,9 @@
               <article class="research-panel rag-panel" data-scene>
                 <div class="panel-topline"><span>Multimodal RAG</span></div>
                 <h3>Clinical reasoning</h3>
-                <p>Agent debate, reasoning critique, and citation-grounded synthesis.</p>
-                <div class="rag-metric"><strong>97.3<span>%</span></strong><p>accuracy on<br>2021 ACR TXIT</p></div>
-                <div class="rag-outcomes"><div><b>+23 pp</b><span>over baseline accuracy</span></div><div><b>&gt;60%</b><span>fewer factual / hallucination errors</span></div></div>
+                <p>Query reformulation, curated retrieval, and citation-grounded aggregation.</p>
+                <div class="rag-metric"><strong>98.0<span>%</span></strong><p>accuracy on<br>300 ACR TXIT questions</p></div>
+                <div class="rag-outcomes"><div><b>94% → 98%</b><span>GPT-5 accuracy</span></div><div><b>8.2×</b><span>higher odds of better physician-rated accuracy</span></div></div>
               </article>
             </div>
             <div id="publications" class="publications-section">
@@ -191,7 +191,7 @@
                 <span class="detail-toggle" aria-hidden="true">+</span>
               </summary>
               <div class="publication-citation">
-                <p>Tingjun Liu, Matthew Inkman, Andrew Willett, Xucheng Wang, Weizhi Du, Julian C. Hong, Michael R. Waters, and Jin Zhang.</p>
+                <p>Tingjun Liu, Matthew Inkman, Andrew Willett, Xucheng Wang, Weizhi Du, Jessika A. Contreras, Stephanie Markovina, Julian C. Hong, Michael R. Waters, and Jin Zhang.</p>
                 <p>Manuscript under review at <i>JAMA Oncology</i>, 2026.</p>
                 <a class="text-link publication-link" href="pub/ert-rag-manuscript/" aria-label="Read the eRT-RAG manuscript">Link ↗<span aria-hidden="true"></span></a>
               </div>
@@ -223,22 +223,22 @@
           <article class="project-card" data-reveal>
             <a class="project-figure" href="assets/images/projects/capability-agents-concept.png" target="_blank" rel="noopener" aria-label="View agent capability-discovery method figure at full size"><img class="project-image" src="assets/images/projects/capability-agents-concept.png" width="1536" height="1024" alt="Concept sketch of an agent with partial knowledge selectively acquiring hidden capabilities, retaining them across arriving tasks, and weighing budget, deadlines, and agent availability" loading="lazy"></a>
             <div class="project-copy"><h3>Agents with partial knowledge</h3><p>Planner-guided agents acquire hidden capabilities and reuse them across budget-constrained tasks.</p>
-              <div class="project-results"><div><strong>4.5–7.8×</strong><span>fewer contacts with persistent memory</span></div><div><strong>62% fewer</strong><span>action schemas disclosed vs. Reveal-All</span></div></div>
-              <details><summary>Method &amp; findings <span class="detail-toggle" aria-hidden="true">+</span></summary><p>Symbolic diagnosis identifies missing capabilities, and an LLM ranks providers from public profiles. Selective disclosure expands a partial action model; persistent memory reuses discoveries across tasks. Planner-guided acquisition disclosed 62% fewer action schemas than Reveal-All, memory reuse reduced contacts by 4.5–7.8×, and all 576 single-task trials produced independently validated plans.</p><a class="text-link project-report-link" href="pub/capability-agents-project/" aria-label="Read the capability discovery agents project report">Read project report ↗<span aria-hidden="true"></span></a></details>
+              <div class="project-results"><div><strong>61% fewer</strong><span>agent contacts vs. random querying</span></div><div><strong>62% fewer</strong><span>action schemas disclosed vs. Reveal-All</span></div></div>
+              <details><summary>Method &amp; findings <span class="detail-toggle" aria-hidden="true">+</span></summary><p>Symbolic diagnosis identifies missing capabilities, and an LLM ranks providers from public profiles. Selective disclosure expands a partial action model; persistent memory reuses discoveries across tasks. Across six methods and 576 validated trials, task-conditioned acquisition reduced agent contacts by 61% versus random querying and action-schema disclosure by 62% versus Reveal-All.</p><a class="text-link project-report-link" href="pub/capability-agents-project/" aria-label="Read the capability discovery agents project report">Read project report ↗<span aria-hidden="true"></span></a></details>
             </div>
           </article>
           <article class="project-card" data-reveal>
             <a class="project-figure" href="assets/images/projects/gomoku-sketch.png" target="_blank" rel="noopener" aria-label="View gomoku method figure at full size"><img class="project-image" src="assets/images/projects/gomoku-sketch.png" width="1536" height="1024" alt="Sketch of a Gomoku board, self-play games, a learned network, and a pruned search tree" loading="lazy"></a>
-            <div class="project-copy"><h3>Gomoku through self-play</h3><p>AlphaZero-style self-play with pruning-aware MCTS.</p>
-              <div class="project-results"><div><strong>60%</strong><span>best recorded win rate vs. pure MCTS</span></div><div><strong>6.9×</strong><span>faster training: ~48 → 7 hours</span></div></div>
-              <details><summary>Method &amp; findings <span class="detail-toggle" aria-hidden="true">+</span></summary><p>An AlphaZero-style policy–value network guides self-play and MCTS. Local candidate restriction narrows the search, while threat-aware exceptions preserve immediate winning and blocking moves. Training on 8×8 connect-5 fell from about 48 to 7 hours (6.9× faster), with a 60% best recorded win rate against pure MCTS.</p><a class="text-link project-report-link" href="pub/gomoku-project/" aria-label="Read the Gomoku project report">Read project report ↗<span aria-hidden="true"></span></a></details>
+            <div class="project-copy"><h3>Gomoku through self-play</h3><p>AlphaZero-style self-play with threat-aware MCTS pruning.</p>
+              <div class="project-results"><div><strong>60%</strong><span>peak win rate vs. pure MCTS</span></div><div><strong>7 hours</strong><span>completed 8×8 connect-5 training</span></div></div>
+              <details><summary>Method &amp; findings <span class="detail-toggle" aria-hidden="true">+</span></summary><p>An AlphaZero-style policy–value network guides self-play and MCTS. Local candidate restriction narrows the search, while threat-aware exceptions preserve immediate winning and blocking moves. The pruned system completed 8×8 connect-5 training in 7 hours versus an unfinished 48-hour unrestricted run, achieving a 60% peak win rate against pure MCTS.</p><a class="text-link project-report-link" href="pub/gomoku-project/" aria-label="Read the Gomoku project report">Read project report ↗<span aria-hidden="true"></span></a></details>
             </div>
           </article>
           <article class="project-card" data-reveal>
             <a class="project-figure" href="assets/images/projects/grounding-sketch.png" target="_blank" rel="noopener" aria-label="View grounding method figure at full size"><img class="project-image" src="assets/images/projects/grounding-sketch.png" width="1536" height="1024" alt="Illustration of a language query selecting the mug left of a book through region proposals, matching, and spatial reasoning" loading="lazy"></a>
             <div class="project-copy"><h3>Training-free visual grounding</h3><p>YOLOv8n + OpenCLIP + spatial reasoning. No task-specific training.</p>
               <div class="project-results"><div><strong>0.15 B</strong><span>total model parameters</span></div><div><strong>62.8%</strong><span>Acc@0.5 on RefCOCO-M</span></div></div>
-              <details><summary>Method &amp; findings <span class="detail-toggle" aria-hidden="true">+</span></summary><p>YOLOv8n region proposals, OpenCLIP crop–text matching, and explicit spatial reasoning form a training-free, 0.15B-parameter system. Each prediction includes an explanation of its score. On 5,598 RefCOCO-M queries, the full pipeline reached 62.8% Acc@0.5 and 60.9% Acc@0.7; spatial reasoning alone improved Acc@0.5 by 16 percentage points over the CLIP-only baseline.</p><a class="text-link project-report-link" href="pub/visual-grounding-project/" aria-label="Read the visual grounding project report">Read project report ↗<span aria-hidden="true"></span></a></details>
+              <details><summary>Method &amp; findings <span class="detail-toggle" aria-hidden="true">+</span></summary><p>YOLOv8n region proposals, OpenCLIP crop–text scoring, and explicit spatial reasoning form a training-free, 0.15B-parameter system with interpretable explanations. Ablations improved RefCOCO-M Acc@0.5 from 40.6% with CLIP alone to 62.8% with the full pipeline, achieving 0.614 mIoU across 5,598 validation queries.</p><a class="text-link project-report-link" href="pub/visual-grounding-project/" aria-label="Read the visual grounding project report">Read project report ↗<span aria-hidden="true"></span></a></details>
             </div>
           </article>
         </div>
